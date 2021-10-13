@@ -1,16 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
 }
 div {
   text-align: center;
-  margin: auto 0;
 }
 button {
-  margin-top: 20%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   background: none;
   border: 1px solid;
   width: 100px;
-  height: 50px;
+  height: 40px;
   cursor: pointer;
   border-radius: 10px;
 }
