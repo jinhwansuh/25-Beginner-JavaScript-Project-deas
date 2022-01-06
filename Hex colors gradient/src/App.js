@@ -1,16 +1,17 @@
-import Button from './Button.js';
-import Text from './Text.js';
+import { Button, Text } from './components/index.js';
 
-export default function Background({ mainEl, initialState, randomColor }) {
+export default function App({ mainEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
   this.state = initialState;
-
   this.setState = (nextState) => {
     this.state = nextState;
     this.render();
   };
+
+  const randomColor = () =>
+    '#' + Math.round(Math.random() * 0xffffff).toString(16);
 
   const text = new Text({
     containerEl,
