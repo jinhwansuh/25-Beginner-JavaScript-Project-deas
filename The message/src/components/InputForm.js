@@ -1,4 +1,4 @@
-export default function InputForm({ boardEl, onSubmit }) {
+export default function InputForm({ containerEl, onSubmit }) {
   const formEl = document.createElement('form');
 
   this.render = () => {
@@ -23,5 +23,5 @@ export default function InputForm({ boardEl, onSubmit }) {
   });
   this.render();
 
-  boardEl.appendChild(formEl);
+  containerEl.appendChild(formEl);
 }

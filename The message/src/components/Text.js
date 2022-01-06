@@ -1,4 +1,4 @@
-export default function Text({ boardEl }, text) {
+export default function Text({ containerEl }, text) {
   const textEl = document.createElement('div');
 
   this.render = () => {
@@ -8,5 +8,5 @@ export default function Text({ boardEl }, text) {
   };
   this.render();
 
-  boardEl.appendChild(textEl);
+  containerEl.appendChild(textEl);
 }

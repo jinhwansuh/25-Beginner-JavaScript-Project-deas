@@ -12,11 +12,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.board {
-  height: 300px;
-  width: 500px;
-  border: 2px solid red;
-  box-shadow: 1px;
+  flex-direction: column;
 }
