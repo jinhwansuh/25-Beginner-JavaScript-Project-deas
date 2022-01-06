@@ -1,6 +1,5 @@
 import { request } from './api/quotable.js';
-import Board from './components/Board.js';
-import Button from './components/button.js';
+import { Board, Button } from './components/index.js';
 
 export default function App({ mainEl, initialState }) {
   const containerEl = document.createElement('div');
