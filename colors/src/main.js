@@ -1,5 +1,6 @@
 import App from './App.js';
 
-const $target = document.querySelector('#app');
+const mainEl = document.querySelector('#app');
+const initialState = 'white';
 
-new App({ $target });
+new App({ mainEl, initialState });
