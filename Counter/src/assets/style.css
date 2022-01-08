@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(228, 243, 88);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  border: 6px solid;
+  height: 350px;
+  width: 600px;
+  background-color: rgb(238, 230, 230);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count {
+  font-size: 100px;
+  margin: 10px 0;
+}
+.btn {
+  cursor: pointer;
+  width: 90px;
+  height: 40px;
+  margin: 3px;
+  background: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}

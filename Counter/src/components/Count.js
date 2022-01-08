@@ -1,5 +1,6 @@
-export default function Number({ targetEl, initialState }) {
+export default function Count({ targetEl, initialState }) {
   const numberEl = document.createElement('h1');
+  numberEl.className = 'count';
 
   this.state = initialState;
 

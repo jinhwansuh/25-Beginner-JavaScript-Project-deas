@@ -2,7 +2,7 @@ export default function Text({ targetEl }) {
   const textEl = document.createElement('h1');
 
   this.render = () => {
-    textEl.innerHTML = `Counter`;
+    textEl.innerHTML = `COUNTER`;
   };
 
   this.render();

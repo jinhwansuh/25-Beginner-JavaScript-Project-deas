@@ -1,8 +1,11 @@
-import { Button, Number, Text } from './components/index.js';
+import { Button, Count, Text } from './components/index.js';
 
 export default function App({ mainEl, initialState }) {
   const containerEl = document.createElement('div');
+  const counterEl = document.createElement('div');
+  const buttonEl = document.createElement('div');
   containerEl.className = 'container';
+  counterEl.className = 'counter';
   this.state = initialState;
 
   const onIncrease = () => {
@@ -16,10 +19,12 @@ export default function App({ mainEl, initialState }) {
     number.setState(nextState);
   };
 
-  new Text({ targetEl: containerEl });
-  const number = new Number({ targetEl: containerEl, initialState });
-  new Button({ targetEl: containerEl, onChange: onIncrease }, 'increase');
-  new Button({ targetEl: containerEl, onChange: onDecrease }, 'decrease');
+  new Text({ targetEl: counterEl });
+  const number = new Count({ targetEl: counterEl, initialState });
+  new Button({ targetEl: buttonEl, onChange: onIncrease, state: 'Increase' });
+  new Button({ targetEl: buttonEl, onChange: onDecrease, state: 'Decrease' });
 
+  counterEl.appendChild(buttonEl);
+  containerEl.appendChild(counterEl);
   mainEl.appendChild(containerEl);
 }
