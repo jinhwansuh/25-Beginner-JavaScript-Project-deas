@@ -1,4 +1,4 @@
-export default function Number({ containerEl, initialState }) {
+export default function Number({ targetEl, initialState }) {
   const numberEl = document.createElement('h1');
 
   this.state = initialState;
@@ -13,5 +13,5 @@ export default function Number({ containerEl, initialState }) {
   };
   this.render();
 
-  containerEl.appendChild(numberEl);
+  targetEl.appendChild(numberEl);
 }

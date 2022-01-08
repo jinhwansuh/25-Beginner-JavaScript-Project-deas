@@ -16,10 +16,10 @@ export default function App({ mainEl, initialState }) {
     number.setState(nextState);
   };
 
-  new Text({ containerEl });
-  const number = new Number({ containerEl, initialState });
-  new Button({ containerEl, onChange: onIncrease }, 'increase');
-  new Button({ containerEl, onChange: onDecrease }, 'decrease');
+  new Text({ targetEl: containerEl });
+  const number = new Number({ targetEl: containerEl, initialState });
+  new Button({ targetEl: containerEl, onChange: onIncrease }, 'increase');
+  new Button({ targetEl: containerEl, onChange: onDecrease }, 'decrease');
 
   mainEl.appendChild(containerEl);
 }

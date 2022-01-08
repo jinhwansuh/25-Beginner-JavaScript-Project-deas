@@ -1,4 +1,4 @@
-export default function Button({ containerEl, onChange }, state) {
+export default function Button({ targetEl, onChange }, state) {
   const buttonEl = document.createElement('button');
   buttonEl.textContent = `${state}`;
 
@@ -6,5 +6,5 @@ export default function Button({ containerEl, onChange }, state) {
     onChange();
   });
 
-  containerEl.appendChild(buttonEl);
+  targetEl.appendChild(buttonEl);
 }
