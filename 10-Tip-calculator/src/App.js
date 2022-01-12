@@ -1,6 +1,4 @@
-import Button from './components/Button.js';
-import Input from './components/Input.js';
-import SelectBox from './components/SelectBox.js';
+import { Input, SelectBox, Button } from './components/index.js';
 
 export default function App({ mainEl }) {
   const containerEl = document.createElement('div');
@@ -14,6 +12,13 @@ export default function App({ mainEl }) {
 
   this.state = initialState;
 
+  this.setState = (nextState) => {
+    this.state = nextState;
+    input1.setState(nextState);
+    input2.setState(nextState);
+    selectBox.render();
+  };
+
   const onChange = (state) => {
     const nextState = { ...this.state, ...state };
     this.state = nextState;
@@ -24,22 +29,29 @@ export default function App({ mainEl }) {
     if (amount && guests && quality) {
       const tip = (+amount * (+quality / 100)) / +guests;
       alert(tip.toFixed(2));
+      this.setState(initialState);
     }
   };
 
-  new Input({
+  const input1 = new Input({
     targetEl: containerEl,
     state: 'amount',
     children: 'Bill Amount',
+    initialState: this.state,
     onChange,
   });
-  new Input({
+  const input2 = new Input({
     targetEl: containerEl,
     state: 'guests',
     children: 'Number of Guests',
+    initialState: this.state,
     onChange,
   });
-  new SelectBox({ targetEl: containerEl, state: 'quality', onChange });
+  const selectBox = new SelectBox({
+    targetEl: containerEl,
+    state: 'quality',
+    onChange,
+  });
   new Button({ targetEl: containerEl, state: 'Caculate', onClick });
 
   mainEl.appendChild(containerEl);
