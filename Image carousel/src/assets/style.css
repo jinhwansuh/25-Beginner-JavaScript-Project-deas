@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+}
+.image-container {
+  height: 300px;
+  width: 500px;
+}
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  margin: 10px 20px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.checked {
+  background-color: red;
+}
