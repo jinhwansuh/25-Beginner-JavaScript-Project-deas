@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0;
+}
+
+select option[value=""][disabled] {
+	display: none;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+} */
