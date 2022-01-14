@@ -1,4 +1,4 @@
-export default function IndexImage({ containerEl, imageLength, initialState }) {
+export default function IndexImage({ targetEl, imageLength, initialState }) {
   const indexEl = document.createElement('div');
   this.state = initialState;
   const indexArray = Array.from({ length: imageLength }, (v, i) => i);
@@ -21,5 +21,5 @@ export default function IndexImage({ containerEl, imageLength, initialState }) {
 
   this.render();
 
-  containerEl.appendChild(indexEl);
+  targetEl.appendChild(indexEl);
 }

@@ -1,4 +1,4 @@
-export default function Image({ containerEl, initialState }) {
+export default function Image({ targetEl, initialState }) {
   const imageEl = document.createElement('div');
   imageEl.className = 'image-container';
 
@@ -15,5 +15,5 @@ export default function Image({ containerEl, initialState }) {
 
   this.render();
 
-  containerEl.appendChild(imageEl);
+  targetEl.appendChild(imageEl);
 }

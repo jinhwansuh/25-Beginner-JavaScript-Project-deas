@@ -15,37 +15,39 @@ export default function App({ mainEl, initialState }) {
   this.state = initialState;
   const imageLength = imageArray.length;
 
-  const onPrevClick = () => {
-    this.state -= 1;
-    if (this.state === -1) this.state = imageLength - 1;
-    image.setState(imageArray[this.state]);
-    indexImage.setState(this.state);
-  };
-  const onNextClick = () => {
-    this.state += 1;
-    if (this.state === imageLength) this.state = 0;
+  this.setState = (nextState) => {
+    this.state = nextState;
     image.setState(imageArray[this.state]);
     indexImage.setState(this.state);
   };
 
+  const onPrevClick = () => {
+    const nextState = this.state - 1 === -1 ? imageLength - 1 : this.state - 1;
+    this.setState(nextState);
+  };
+  const onNextClick = () => {
+    const nextState = this.state + 1 === imageLength ? 0 : this.state + 1;
+    this.setState(nextState);
+  };
+
   const image = new Image({
-    containerEl,
+    targetEl: containerEl,
     initialState: imageArray[this.state],
   });
 
   new Button({
-    containerEl,
+    targetEl: containerEl,
     state: '<',
     onClick: onPrevClick,
   });
   new Button({
-    containerEl,
+    targetEl: containerEl,
     state: '>',
     onClick: onNextClick,
   });
 
   const indexImage = new IndexImage({
-    containerEl,
+    targetEl: containerEl,
     imageLength,
     initialState: this.state,
   });
