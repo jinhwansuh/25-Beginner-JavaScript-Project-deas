@@ -3,20 +3,26 @@ import { getSessionStorage, setSesstionStorage } from './utils/storage.js';
 
 export default function App({ mainEl }) {
   const containerEl = document.createElement('div');
-  this.state = getSessionStorage();
+  const initialState = getSessionStorage();
   const initialInputState = {
     Question: '',
     Answer: '',
   };
+  this.state = initialState;
   this.inputState = initialInputState;
 
   this.setState = (nextState) => {
     this.state = nextState;
     setSesstionStorage(this.state);
+    cardList.setState(this.state);
   };
-  this.setInputState = (state) => {
-    const nextInputState = { ...inputState, ...state };
-    console.log();
+  this.setInputState = (nextInputState) => {
+    this.inputState = nextInputState;
+  };
+
+  const onChange = (state, value) => {
+    const nextInputState = { ...this.inputState, [state]: value };
+    this.setInputState(nextInputState);
   };
 
   const onDeleteClick = () => {
@@ -26,13 +32,14 @@ export default function App({ mainEl }) {
 
   const onAddClick = () => {};
 
-  const onSaveClick = (card) => {
-    const nextState = [...this.state, card];
+  const onSaveClick = () => {
+    const targetList = document.querySelectorAll('input');
+    targetList.forEach((target) => (target.value = ''));
+    const nextState = [...this.state, this.inputState];
     this.setState(nextState);
+    this.setInputState(initialInputState);
   };
   const onCloseClick = () => {};
-
-  const onChange = (state) => {};
 
   new Header({ targetEl: containerEl, onAddClick, onDeleteClick });
   new CreateCard({
@@ -41,7 +48,10 @@ export default function App({ mainEl }) {
     onSaveClick,
     onCloseClick,
   });
-  new CardsList({ targetEl: containerEl, initialState: this.state });
+  const cardList = new CardsList({
+    targetEl: containerEl,
+    initialState: this.state,
+  });
 
   mainEl.appendChild(containerEl);
 }

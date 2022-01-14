@@ -7,3 +7,14 @@ body {
 header{
   display: flex;
 }
+
+.card-list {
+  display: flex;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  background-color: tomato;
+  margin: 20px;
+}
