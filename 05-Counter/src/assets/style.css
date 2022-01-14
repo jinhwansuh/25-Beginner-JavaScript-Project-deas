@@ -7,15 +7,18 @@ h1 {
   margin: 0;
 }
 
-.container {
+body {
   background-color: rgb(228, 243, 88);
+}
+
+main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.counter {
+.container {
   border: 6px solid;
   height: 350px;
   width: 600px;
