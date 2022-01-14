@@ -1,4 +1,4 @@
-export default function Board({ containerEl, initialState }) {
+export default function Board({ targetEl, initialState }) {
   const boardEl = document.createElement('div');
   boardEl.className = 'board';
 
@@ -11,10 +11,10 @@ export default function Board({ containerEl, initialState }) {
 
   this.render = () => {
     boardEl.innerHTML = `
-    <div>"${this.state.content}"</div>
-    <div>${this.state.author}</div>
+      <div>"${this.state.content}"</div>
+      <div>${this.state.author}</div>
     `;
   };
 
-  containerEl.appendChild(boardEl);
+  targetEl.appendChild(boardEl);
 }

@@ -1,4 +1,4 @@
-export default function Button({ containerEl, onChange }) {
+export default function Button({ targetEl, onChange }) {
   const buttonEl = document.createElement('button');
   buttonEl.textContent = 'Generate Quote';
 
@@ -6,5 +6,5 @@ export default function Button({ containerEl, onChange }) {
     onChange();
   });
 
-  containerEl.appendChild(buttonEl);
+  targetEl.appendChild(buttonEl);
 }

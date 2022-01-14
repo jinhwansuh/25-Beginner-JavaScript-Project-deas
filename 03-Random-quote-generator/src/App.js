@@ -20,8 +20,8 @@ export default function App({ mainEl, initialState }) {
     });
   };
 
-  const board = new Board({ containerEl, initialState });
-  new Button({ containerEl, onChange });
+  const board = new Board({ targetEl: containerEl, initialState });
+  new Button({ targetEl: containerEl, onChange });
 
   mainEl.appendChild(containerEl);
 }
