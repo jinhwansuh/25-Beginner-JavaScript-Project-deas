@@ -1,11 +1,9 @@
-# 25-Beginner-JavaScript-Project-ideas
+# 25 Beginner JavaScript Project ideas
 
-
-
-vanilla.js를 이용하여 미니프로젝트를 만들어 봅니다.
 
 https://dev.to/codefoxx/25-beginner-javascript-project-ideas-3m9h
 
+위 25개의 프로젝트를 Vanilla Js를 Atomic Design을 최대한 이용하여 구현합니다.
 
+각 프로젝트의 폴더구조는 각 프로젝트 Wiki를 통해 확인할 수 있습니다.
 
- 25-Beginner-JavaScript-Project-ideas 만들기 
