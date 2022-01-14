@@ -11,10 +11,10 @@ export default function App({ mainEl, initialState }) {
     newText.setState(nextState);
   };
 
-  new Text({ containerEl }, 'Pass the message');
-  new Text({ containerEl }, 'Enter a message');
-  new InputForm({ containerEl, onSubmit });
-  const newText = new NewText({ containerEl, initialState });
+  new Text({ targetEl: containerEl, text: 'Pass the message' });
+  new Text({ targetEl: containerEl, text: 'Enter a message' });
+  new InputForm({ targetEl: containerEl, onSubmit });
+  const newText = new NewText({ targetEl: containerEl, initialState });
 
   mainEl.appendChild(containerEl);
 }
