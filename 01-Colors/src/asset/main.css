@@ -9,6 +9,10 @@ body {
 div {
   text-align: center;
 }
+.container {
+  height: 100vh;
+}
+
 button {
   left: 50%;
   top: 50%;

@@ -12,7 +12,6 @@ export default function App({ mainEl, initialState }) {
     'purple',
   ];
 
-  containerEl.style.minHeight = '100vh';
   containerEl.style.background = this.state;
 
   new Button({
