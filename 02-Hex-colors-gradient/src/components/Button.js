@@ -1,4 +1,4 @@
-export default function Button({ containerEl, onClick }) {
+export default function Button({ targetEl, onClick }) {
   const buttonEl = document.createElement('button');
   buttonEl.className = 'color-btn';
   buttonEl.textContent = 'Click Me';
@@ -7,5 +7,5 @@ export default function Button({ containerEl, onClick }) {
     onClick();
   });
 
-  containerEl.appendChild(buttonEl);
+  targetEl.appendChild(buttonEl);
 }

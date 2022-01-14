@@ -1,28 +1,27 @@
 import { Button, Text } from './components/index.js';
+import { randomColor } from './utils/random.js';
 
 export default function App({ mainEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
   this.state = initialState;
+
   this.setState = (nextState) => {
     this.state = nextState;
+    text.setState(this.state);
     this.render();
   };
 
-  const randomColor = () =>
-    '#' + Math.round(Math.random() * 0xffffff).toString(16);
-
   const text = new Text({
-    containerEl,
+    targetEl: containerEl,
     initialState,
   });
 
   new Button({
-    containerEl,
+    targetEl: containerEl,
     onClick: () => {
       const nextState = { color1: randomColor(), color2: randomColor() };
-      text.setState(nextState);
       this.setState(nextState);
     },
   });

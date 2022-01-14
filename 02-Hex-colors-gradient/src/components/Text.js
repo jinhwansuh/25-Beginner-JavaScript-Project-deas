@@ -1,4 +1,4 @@
-export default function Text({ containerEl, initialState }) {
+export default function Text({ targetEl, initialState }) {
   const textEl = document.createElement('div');
   textEl.className = 'text';
 
@@ -20,5 +20,5 @@ export default function Text({ containerEl, initialState }) {
 
   this.render();
 
-  containerEl.appendChild(textEl);
+  targetEl.appendChild(textEl);
 }
