@@ -1,10 +1,11 @@
-export default function Button({ containerEl, onChangeColor }) {
+export default function Button({ targetEl, onClick }) {
   const ButtonEl = document.createElement('button');
   ButtonEl.className = 'btn-change';
-  ButtonEl.textContent = 'Click me';
-  containerEl.appendChild(ButtonEl);
+  ButtonEl.textContent = 'Click Me!';
 
   ButtonEl.addEventListener('click', (e) => {
-    onChangeColor();
+    onClick();
   });
+
+  targetEl.appendChild(ButtonEl);
 }
