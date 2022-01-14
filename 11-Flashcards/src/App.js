@@ -8,6 +8,7 @@ export default function App({ mainEl }) {
     Question: '',
     Answer: '',
   };
+
   this.state = initialState;
   this.inputState = initialInputState;
 
@@ -30,7 +31,9 @@ export default function App({ mainEl }) {
     this.setState(nextState);
   };
 
-  const onAddClick = () => {};
+  const onAddClick = () => {
+    createdCard.setState(true);
+  };
 
   const onSaveClick = () => {
     const targetList = document.querySelectorAll('input');
@@ -39,10 +42,12 @@ export default function App({ mainEl }) {
     this.setState(nextState);
     this.setInputState(initialInputState);
   };
-  const onCloseClick = () => {};
+  const onCloseClick = () => {
+    createdCard.setState(false);
+  };
 
   new Header({ targetEl: containerEl, onAddClick, onDeleteClick });
-  new CreateCard({
+  const createdCard = new CreateCard({
     targetEl: containerEl,
     onChange,
     onSaveClick,

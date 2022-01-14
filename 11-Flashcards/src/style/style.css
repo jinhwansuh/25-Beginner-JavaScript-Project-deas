@@ -3,9 +3,13 @@ body {
   margin: 0;
 }
 
-
 header{
   display: flex;
+}
+
+.create-card {
+  height: 200px;
+  background-color: turquoise;
 }
 
 .card-list {
