@@ -2,7 +2,6 @@ export default function CardsList({ targetEl, initialState }) {
   const cardsListEl = document.createElement('div');
   cardsListEl.className = 'card-list';
   this.state = initialState;
-  this.displayState = false;
 
   this.setState = (nextState) => {
     this.state = nextState;
@@ -14,8 +13,8 @@ export default function CardsList({ targetEl, initialState }) {
     if (targetEl.className === 'card') {
       const cardEl = e.target.closest('.card');
       const answerEl = cardEl.querySelector('.answer');
-      this.displayState = !this.displayState;
-      answerEl.style.display = this.displayState ? 'block' : 'none';
+      const displayState = answerEl.style.display;
+      answerEl.style.display = displayState === 'block' ? 'none' : 'block';
     }
   });
 
