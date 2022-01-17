@@ -1,7 +1,7 @@
 import { Button, Input } from '../base/index.js';
 
 export default function ModalForm({ targetEl, onSubmit, onCloseClick }) {
-  const modalFormEl = document.createElement('form');
+  const modalFormEl = document.createElement('div');
 
   this.state = true;
 
@@ -10,13 +10,14 @@ export default function ModalForm({ targetEl, onSubmit, onCloseClick }) {
     this.render();
   };
 
-  modalFormEl.addEventListener('submit', (e) => {
+  modalFormEl.addEventListener('keyup', (e) => {
     e.preventDefault();
-
-    const inputEl = modalFormEl.querySelector('input');
-    if (inputEl.value) {
-      onSubmit(inputEl.value);
-      inputEl.value = '';
+    if (e.key === 'Enter') {
+      const inputEl = modalFormEl.querySelector('input');
+      if (inputEl.value) {
+        onSubmit(inputEl.value);
+        inputEl.value = '';
+      }
     }
   });
 
