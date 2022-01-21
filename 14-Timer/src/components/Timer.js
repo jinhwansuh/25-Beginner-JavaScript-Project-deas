@@ -1,5 +1,8 @@
+import { convertTimetoString } from '../utils/convertTime.js';
+
 export default function Timer({ targetEl, initialState }) {
   const timerEl = document.createElement('div');
+  timerEl.className = 'timer';
   this.state = initialState;
 
   this.setState = (nextState) => {
@@ -8,8 +11,16 @@ export default function Timer({ targetEl, initialState }) {
   };
 
   this.render = () => {
+    const { minute, second, ms } = this.state;
+
     timerEl.innerHTML = `
-      ${this.state}
+      ${
+        convertTimetoString(minute) +
+        ' : ' +
+        convertTimetoString(second) +
+        ' : ' +
+        convertTimetoString(ms)
+      }
     `;
   };
 
