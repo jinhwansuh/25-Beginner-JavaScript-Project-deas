@@ -6,4 +6,14 @@ body {
 
 .container {
   height: 100vh;
+  background: linear-gradient(to bottom, white, rgb(26, 32, 87));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  font-size: 100px;
+  color: white;
+  font-weight: bold;
 }
