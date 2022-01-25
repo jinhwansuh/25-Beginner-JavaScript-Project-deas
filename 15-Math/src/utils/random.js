@@ -9,7 +9,19 @@ const createNonZeroNumber = () => {
 
 export const createRandomTwoNumber = () => {
   return {
-    number1: createNonZeroNumber(),
-    number2: randomNumber(),
+    number1: randomNumber(),
+    number2: createNonZeroNumber(),
   };
+};
+
+export const getAnswer = (state) => {
+  return (
+    Math.round(eval(state.number1 + state.calculation + state.number2) * 100) /
+    100
+  );
+};
+
+export const getdifferentNumber = (answer) => {
+  const number = randomNumber();
+  return number === answer ? getdifferentNumber(answer) : number;
 };
