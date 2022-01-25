@@ -1,4 +1,4 @@
-import { Header, Table } from './components/domain/index.js';
+import { Header, Table, Numbers } from './components/domain/index.js';
 import { createRandomTwoNumber, randomNumber } from './utils/random.js';
 
 export default function App({ mainEl }) {
@@ -13,7 +13,8 @@ export default function App({ mainEl }) {
 
   this.setState = (nextState) => {
     this.state = nextState;
-    table.setState(this.state);
+    table.setState(nextState);
+    numbers.setState(nextState);
   };
 
   const onCalculationClick = (calculation) => {
@@ -36,11 +37,25 @@ export default function App({ mainEl }) {
     }
   };
 
+  const onAnswerClick = (number) => {
+    this.setState({ ...this.state, ...createRandomTwoNumber() });
+  };
+  const onWrongClick = (number) => {
+    console.log('fail');
+  };
+
   new Header({ targetEl: mainEl, onClick: onCalculationClick });
 
   const table = new Table({
     targetEl: containerEl,
     initialState: this.state,
+  });
+
+  const numbers = new Numbers({
+    targetEl: containerEl,
+    initialState: this.state,
+    onAnswerClick,
+    onWrongClick,
   });
 
   // add

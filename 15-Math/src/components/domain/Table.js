@@ -1,3 +1,5 @@
+import { Text } from '../base/index.js';
+
 export default function Table({ targetEl, initialState }) {
   const tableEl = document.createElement('div');
 
