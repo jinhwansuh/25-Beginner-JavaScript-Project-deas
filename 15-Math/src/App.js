@@ -41,10 +41,16 @@ export default function App({ mainEl }) {
     this.setState({ ...this.state, ...createRandomTwoNumber() });
   };
   const onWrongClick = (number) => {
-    console.log('fail');
+    const audio = new Audio('./src/assets/wrong.mp3');
+    audio.loop = false;
+    audio.play();
   };
 
-  new Header({ targetEl: mainEl, onClick: onCalculationClick });
+  new Header({
+    targetEl: mainEl,
+    onClick: onCalculationClick,
+    state: this.state.calculation,
+  });
 
   const table = new Table({
     targetEl: containerEl,
@@ -57,11 +63,6 @@ export default function App({ mainEl }) {
     onAnswerClick,
     onWrongClick,
   });
-
-  // add
-  // subtract
-  // multiply
-  // divide
 
   mainEl.appendChild(containerEl);
 }
