@@ -1,6 +1,7 @@
-export default function Text({ targetEl, text, onClick }) {
+export default function Text({ targetEl, text, onClick, state, style }) {
   const textEl = document.createElement('span');
   textEl.textContent = text;
+  textEl.style = style ? style : '';
 
   textEl.addEventListener('click', (e) => {
     if (onClick) {

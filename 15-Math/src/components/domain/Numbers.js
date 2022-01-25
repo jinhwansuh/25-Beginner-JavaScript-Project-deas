@@ -8,6 +8,7 @@ export default function Numbers({
   onWrongClick,
 }) {
   const numbersEl = document.createElement('div');
+  numbersEl.className = 'numbers';
   this.state = initialState;
   this.answer = getAnswer(this.state);
 
@@ -26,16 +27,19 @@ export default function Numbers({
       targetEl: numbersEl,
       text: getdifferentNumber(this.answer),
       onClick: onWrongClick,
+      style: 'background-color: #FE4A49',
     });
     new Text({
       targetEl: numbersEl,
       text: getdifferentNumber(this.answer),
       onClick: onWrongClick,
+      style: 'background-color: #2AB7CA',
     });
     new Text({
       targetEl: numbersEl,
       text: this.answer,
       onClick: onAnswerClick,
+      style: 'background-color: #FED766;',
     });
   };
   this.render();

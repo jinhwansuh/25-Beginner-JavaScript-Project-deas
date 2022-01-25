@@ -1,8 +1,15 @@
 import { Text } from '../base/index.js';
 
-export default function Header({ targetEl, onClick }) {
+export default function Header({ targetEl, onClick, state }) {
   const headerEl = document.createElement('header');
   const navEl = document.createElement('nav');
+
+  const operation = {
+    ADD: '+',
+    SUBTRACT: '-',
+    MULTIPLY: '*',
+    DIVIDE: '/',
+  };
 
   new Text({ targetEl: headerEl, text: 'MATH 4 KIDS' });
   new Text({ targetEl: navEl, text: 'ADD', onClick });

@@ -2,6 +2,7 @@ import { Text } from '../base/index.js';
 
 export default function Table({ targetEl, initialState }) {
   const tableEl = document.createElement('div');
+  tableEl.className = 'table';
 
   this.state = initialState;
 
@@ -11,11 +12,33 @@ export default function Table({ targetEl, initialState }) {
   };
 
   this.render = () => {
-    tableEl.innerHTML = `
-      <div>${this.state.number1}</div>
-      ${this.state.calculation}
-      <div>${this.state.number2}</div>
-    `;
+    tableEl.innerHTML = ``;
+
+    new Text({
+      targetEl: tableEl,
+      text: this.state.number1,
+      style: 'color:#FE4A49',
+    });
+    new Text({
+      targetEl: tableEl,
+      text: this.state.calculation,
+      style: 'color: #2AB7CA',
+    });
+    new Text({
+      targetEl: tableEl,
+      text: this.state.number2,
+      style: 'color: #FED766',
+    });
+    new Text({
+      targetEl: tableEl,
+      text: '=',
+      style: 'color: #F86624',
+    });
+    new Text({
+      targetEl: tableEl,
+      text: '?',
+      style: 'color: gray',
+    });
   };
 
   this.render();
