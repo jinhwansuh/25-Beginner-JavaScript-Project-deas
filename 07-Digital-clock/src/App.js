@@ -3,6 +3,7 @@ import { getDate } from './utils/convertDate.js';
 
 export default function App({ mainEl }) {
   const containerEl = document.createElement('div');
+  containerEl.className = 'container';
   const initialState = getDate();
 
   setInterval(() => {

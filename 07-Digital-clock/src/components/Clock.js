@@ -1,8 +1,8 @@
-import { convertDay, getMeridiem, convertHour } from '../utils/convertDate.js';
+import { convertDay, getMeridiem, convertTime } from '../utils/convertDate.js';
 
 export default function Clock({ targetEl, initialState }) {
   const clockEl = document.createElement('div');
-  // day, hour, minute
+  clockEl.className = 'clock';
   this.state = initialState;
 
   this.setState = (nextState) => {
@@ -12,9 +12,9 @@ export default function Clock({ targetEl, initialState }) {
 
   this.render = () => {
     clockEl.innerHTML = `
-      ${convertDay[this.state.day]} ${convertHour(this.state.hour)} : ${
-      this.state.minute
-    } ${getMeridiem(this.state.hour)}
+      ${convertDay[this.state.day]} ${convertTime(
+      this.state.hour
+    )} : ${convertTime(this.state.minute)} ${getMeridiem(this.state.hour)}
     `;
   };
 

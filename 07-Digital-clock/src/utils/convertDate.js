@@ -33,8 +33,8 @@ const calculateHour = (hour) => {
   return hour;
 };
 
-export const convertHour = (hour) => {
-  let stringHour = calculateHour(hour).toString();
+export const convertTime = (time) => {
+  let stringTime = calculateHour(time).toString();
 
-  return stringHour.padStart(2, '0');
+  return stringTime.padStart(2, '0');
 };
