@@ -5,8 +5,7 @@ export const filterData = (data) => {
   const imageArray = [];
 
   data.results?.map((image) => {
-    const a = image.urls.small;
-    imageArray.push(a);
+    imageArray.push(image.urls.small);
   });
 
   return imageArray;
