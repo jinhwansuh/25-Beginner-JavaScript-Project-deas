@@ -1,5 +1,5 @@
 const API_END_POINT = 'https://api.unsplash.com';
-const CLIENT_KEY = 'SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+const CLIENT_KEY = 'uxEc60cz8p1C0Lskdr5a9LSu3cCfls2Dgcm1Sg7WoWM';
 
 export const filterData = (data) => {
   const imageArray = [];

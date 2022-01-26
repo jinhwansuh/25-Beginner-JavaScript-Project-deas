@@ -12,8 +12,8 @@ export default function Form({ targetEl, onSubmit }) {
 
   this.render = () => {
     formEl.innerHTML = `
-      <input />
-      <button type="submit"> 검색 </button>
+      <input placeholder="Search..." />
+      <button type="submit"></button>
     `;
   };
 
