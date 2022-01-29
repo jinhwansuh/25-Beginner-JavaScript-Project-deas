@@ -12,7 +12,7 @@ export default function Table({
   const trEl3 = document.createElement('tr');
   const trEl4 = document.createElement('tr');
   const trEl5 = document.createElement('tr');
-  tableEl.setAttribute('border', '1');
+  tableEl.setAttribute('border', '2');
 
   new Number({
     targetEl: trEl1,

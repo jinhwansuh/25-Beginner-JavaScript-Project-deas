@@ -1,25 +1,29 @@
-import Table from './components/Table.js';
-import Total from './components/Total.js';
+import { Total, Table } from './components/index.js';
 
 export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
 
   this.state = initialState;
 
-  const total = new Total({ targetEl: containerEl, initialState });
+  this.setState = (nextState) => {
+    this.state = nextState;
+    total.setState(nextState);
+  };
 
   const onNumberClick = (text) => {
-    this.state += text;
-    total.setState(this.state);
+    const nextState = this.state + text;
+    this.setState(nextState);
   };
   const onCountClick = () => {
-    const result = eval(this.state);
-    total.setState(result);
+    const nextState = eval(this.state);
+    this.setState(nextState);
   };
   const onClearClick = () => {
-    this.state = '';
-    total.setState(this.state);
+    const nextState = initialState;
+    this.setState(nextState);
   };
+
+  const total = new Total({ targetEl: containerEl, initialState });
 
   new Table({
     targetEl: containerEl,
