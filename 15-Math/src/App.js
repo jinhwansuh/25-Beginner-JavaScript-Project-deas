@@ -1,7 +1,7 @@
 import { Header, Table, Numbers } from './components/domain/index.js';
 import { createRandomTwoNumber, randomNumber } from './utils/random.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -47,7 +47,7 @@ export default function App({ mainEl }) {
   };
 
   new Header({
-    targetEl: mainEl,
+    targetEl,
     onClick: onCalculationClick,
     state: this.state.calculation,
   });
@@ -64,5 +64,5 @@ export default function App({ mainEl }) {
     onWrongClick,
   });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

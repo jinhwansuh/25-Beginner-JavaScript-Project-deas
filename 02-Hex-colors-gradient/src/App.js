@@ -1,7 +1,7 @@
 import { Button, Text } from './components/index.js';
 import { randomColor } from './utils/random.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -30,5 +30,5 @@ export default function App({ mainEl, initialState }) {
     containerEl.style.background = `linear-gradient(to right, ${this.state.color1}, ${this.state.color2})`;
   };
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

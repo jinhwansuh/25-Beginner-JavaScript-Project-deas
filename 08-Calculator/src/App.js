@@ -1,7 +1,7 @@
 import Table from './components/Table.js';
 import Total from './components/Total.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   const initialState = '';
   this.state = initialState;
@@ -27,5 +27,5 @@ export default function App({ mainEl }) {
     onCountClick,
     onClearClick,
   });
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

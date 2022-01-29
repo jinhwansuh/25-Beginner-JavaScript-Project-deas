@@ -5,4 +5,4 @@ const initialState = {
   author: '',
   content: '',
 };
-new App({ mainEl, initialState });
+new App({ targetEl: mainEl, initialState });

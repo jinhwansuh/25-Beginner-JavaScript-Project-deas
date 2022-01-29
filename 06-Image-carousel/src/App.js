@@ -1,6 +1,6 @@
 import { Image, Button, IndexImage } from './components/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
   const imageArray = [
@@ -52,5 +52,5 @@ export default function App({ mainEl, initialState }) {
     initialState: this.state,
   });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

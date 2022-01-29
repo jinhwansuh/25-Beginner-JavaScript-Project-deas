@@ -1,7 +1,7 @@
 import { Header, CreateCard, CardsList } from './components/domain/index.js';
 import { getSessionStorage, setSesstionStorage } from './utils/storage.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   const initialState = getSessionStorage();
   const initialInputState = {
@@ -58,5 +58,5 @@ export default function App({ mainEl }) {
     initialState: this.state,
   });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

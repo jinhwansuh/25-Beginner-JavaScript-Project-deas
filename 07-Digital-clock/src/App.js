@@ -1,7 +1,7 @@
 import { Clock } from './components/index.js';
 import { getDate } from './utils/convertDate.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
   const initialState = getDate();
@@ -15,5 +15,5 @@ export default function App({ mainEl }) {
     targetEl: containerEl,
     initialState,
   });
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

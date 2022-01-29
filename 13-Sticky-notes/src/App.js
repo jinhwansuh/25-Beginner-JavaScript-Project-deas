@@ -1,6 +1,6 @@
 import { Header, NoteLists, ModalForm } from './components/domain/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   this.state = initialState;
 
@@ -19,9 +19,9 @@ export default function App({ mainEl, initialState }) {
     const nextState = [...this.state, text];
     this.setState(nextState);
   };
-  const modalForm = new ModalForm({ targetEl: mainEl, onSubmit, onCloseClick });
-  new Header({ targetEl: mainEl, onClick: onAddClick });
+  const modalForm = new ModalForm({ targetEl, onSubmit, onCloseClick });
+  new Header({ targetEl, onClick: onAddClick });
   const noteLists = new NoteLists({ targetEl: containerEl, initialState });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

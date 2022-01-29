@@ -1,7 +1,7 @@
 import { Header, TodoList } from './components/domain/index.js';
 import { getRandomNumber } from './utils/random.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   const initialState = [];
 
@@ -40,5 +40,5 @@ export default function App({ mainEl }) {
     onCheckClick,
   });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

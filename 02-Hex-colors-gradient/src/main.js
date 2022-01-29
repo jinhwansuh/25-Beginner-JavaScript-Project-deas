@@ -6,4 +6,4 @@ const initialState = {
   color2: '#ffffff',
 };
 
-new App({ mainEl, initialState });
+new App({ targetEl: mainEl, initialState });

@@ -5,7 +5,7 @@ import {
   setSessionStorage,
 } from './utils/storage.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   this.state = getSessionStorage();
 
@@ -44,5 +44,5 @@ export default function App({ mainEl }) {
     initialState: this.state,
     onToggle,
   });
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

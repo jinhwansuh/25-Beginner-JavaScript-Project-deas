@@ -1,7 +1,7 @@
 import { getRandomQuote } from './api/quoteApi.js';
 import QuoteWrapper from './components/domain/QuoteWrapper.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
   this.state = initialState;
@@ -23,5 +23,5 @@ export default function App({ mainEl, initialState }) {
 
   this.init();
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

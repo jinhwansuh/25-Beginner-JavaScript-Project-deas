@@ -1,6 +1,6 @@
 import { Input, SelectBox, Button } from './components/index.js';
 
-export default function App({ mainEl }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -54,5 +54,5 @@ export default function App({ mainEl }) {
   });
   new Button({ targetEl: containerEl, state: 'Caculate', onClick });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

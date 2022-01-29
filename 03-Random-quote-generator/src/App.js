@@ -1,7 +1,7 @@
 import { request } from './api/quotable.js';
 import { Board, Button } from './components/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -23,5 +23,5 @@ export default function App({ mainEl, initialState }) {
   const board = new Board({ targetEl: containerEl, initialState });
   new Button({ targetEl: containerEl, onChange });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

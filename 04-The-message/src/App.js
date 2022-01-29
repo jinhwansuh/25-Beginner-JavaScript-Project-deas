@@ -1,7 +1,7 @@
 import { Text, InputForm, NewText } from './components/index.js';
 import { getSessionstorage, setSessionStorage } from './utils/storage.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -16,5 +16,5 @@ export default function App({ mainEl, initialState }) {
   new InputForm({ targetEl: containerEl, onSubmit });
   const newText = new NewText({ targetEl: containerEl, initialState });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

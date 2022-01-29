@@ -1,6 +1,6 @@
 import { Button } from './components/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -40,5 +40,5 @@ export default function App({ mainEl, initialState }) {
 
   this.render();
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

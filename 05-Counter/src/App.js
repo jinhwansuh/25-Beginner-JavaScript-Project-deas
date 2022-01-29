@@ -1,6 +1,6 @@
 import { Button, Count, Text } from './components/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   const buttonEl = document.createElement('div');
   containerEl.className = 'container';
@@ -27,5 +27,5 @@ export default function App({ mainEl, initialState }) {
   new Button({ targetEl: buttonEl, onChange: onDecrease, state: 'Decrease' });
 
   containerEl.appendChild(buttonEl);
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

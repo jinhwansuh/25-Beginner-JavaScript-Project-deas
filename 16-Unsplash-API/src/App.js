@@ -1,7 +1,7 @@
 import { Header, Wrapper } from './components/domain/index.js';
 import { filterData, getUnsplashImages } from './api/unsplashApi.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
@@ -14,8 +14,8 @@ export default function App({ mainEl, initialState }) {
     });
   };
 
-  new Header({ targetEl: mainEl, onSubmit });
+  new Header({ targetEl, onSubmit });
   const wrapper = new Wrapper({ targetEl: containerEl, initialState });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }

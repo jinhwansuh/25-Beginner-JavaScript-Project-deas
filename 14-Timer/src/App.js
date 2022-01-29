@@ -1,6 +1,6 @@
 import { Timer } from './components/index.js';
 
-export default function App({ mainEl, initialState }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
   this.state = initialState;
@@ -44,5 +44,5 @@ export default function App({ mainEl, initialState }) {
 
   const timer = new Timer({ targetEl: containerEl, initialState });
 
-  mainEl.appendChild(containerEl);
+  targetEl.appendChild(containerEl);
 }
