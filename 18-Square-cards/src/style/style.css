@@ -18,6 +18,7 @@ main {
   display: flex;
   padding: 50px 120px;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .card {
