@@ -16,8 +16,8 @@ export default function CreateCard({
   };
 
   new Text({ targetEl: createCardEl, text: 'Create Flashcard' });
-  new Input({ targetEl: createCardEl, state: 'Question', onChange });
-  new Input({ targetEl: createCardEl, state: 'Answer', onChange });
+  new Input({ targetEl: createCardEl, state: 'question', onChange });
+  new Input({ targetEl: createCardEl, state: 'answer', onChange });
   new Button({ targetEl: createCardEl, state: 'Save', onClick: onSaveClick });
   new Button({ targetEl: createCardEl, state: 'Close', onClick: onCloseClick });
 

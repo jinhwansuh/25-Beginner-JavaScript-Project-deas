@@ -23,8 +23,8 @@ export default function CardsList({ targetEl, initialState }) {
       ${this.state
         ?.map(
           (card) => `<div class="card">
-        <div class="question">${card.Question}</div>
-        <div class="answer" style="display: none">${card.Answer}</div>
+        <div class="question">${card.question}</div>
+        <div class="answer" style="display: none">${card.answer}</div>
       </div>`
         )
         .join('')}

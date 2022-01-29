@@ -3,8 +3,9 @@ export default function Input({ targetEl, state, onChange }) {
 
   inputEl.addEventListener('change', (e) => {
     const value = e.target.value;
-    console.log(value);
-    onChange(state, value);
+    if (value) {
+      onChange(state, value);
+    }
   });
 
   targetEl.appendChild(inputEl);
