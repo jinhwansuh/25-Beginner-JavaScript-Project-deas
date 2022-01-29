@@ -1,15 +1,11 @@
 import { Header, Table, Numbers } from './components/domain/index.js';
-import { createRandomTwoNumber, randomNumber } from './utils/random.js';
+import { createRandomTwoNumber } from './utils/random.js';
 
-export default function App({ targetEl }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
 
-  this.state = {
-    number1: randomNumber(),
-    number2: randomNumber(),
-    calculation: '+',
-  };
+  this.state = initialState;
 
   this.setState = (nextState) => {
     this.state = nextState;
@@ -54,12 +50,12 @@ export default function App({ targetEl }) {
 
   const table = new Table({
     targetEl: containerEl,
-    initialState: this.state,
+    initialState,
   });
 
   const numbers = new Numbers({
     targetEl: containerEl,
-    initialState: this.state,
+    initialState,
     onAnswerClick,
     onWrongClick,
   });
