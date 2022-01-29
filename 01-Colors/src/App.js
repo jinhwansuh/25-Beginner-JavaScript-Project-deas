@@ -1,3 +1,4 @@
+import { colorArray } from './assets/colors.js';
 import { Button } from './components/index.js';
 
 export default function App({ targetEl, initialState }) {
@@ -5,15 +6,6 @@ export default function App({ targetEl, initialState }) {
   containerEl.className = 'container';
 
   this.state = initialState;
-  const colorArray = [
-    'white',
-    'black',
-    'orange',
-    'green',
-    'red',
-    'yellowgreen',
-    'purple',
-  ];
 
   this.setState = (nextState) => {
     this.state = nextState;
