@@ -1,10 +1,9 @@
 import { Clock } from './components/index.js';
 import { getDate } from './utils/convertDate.js';
 
-export default function App({ targetEl }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
-  const initialState = getDate();
 
   setInterval(() => {
     const nextState = getDate();
@@ -15,5 +14,6 @@ export default function App({ targetEl }) {
     targetEl: containerEl,
     initialState,
   });
+
   targetEl.appendChild(containerEl);
 }
