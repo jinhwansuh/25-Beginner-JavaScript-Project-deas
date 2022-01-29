@@ -1,4 +1,5 @@
 import { getAnswer, getdifferentNumber } from '../../utils/random.js';
+import { shuffleArray } from '../../utils/shuffle.js';
 import { Text } from '../base/index.js';
 
 export default function Numbers({
@@ -21,25 +22,28 @@ export default function Numbers({
   this.render = () => {
     numbersEl.innerHTML = '';
 
-    // TODO: 랜덤으로 섞기
+    const array = [
+      {
+        targetEl: numbersEl,
+        text: getdifferentNumber(this.answer),
+        onClick: onWrongClick,
+      },
+      {
+        targetEl: numbersEl,
+        text: getdifferentNumber(this.answer),
+        onClick: onWrongClick,
+      },
+      {
+        targetEl: numbersEl,
+        text: this.answer,
+        onClick: onAnswerClick,
+      },
+    ];
 
-    new Text({
-      targetEl: numbersEl,
-      text: getdifferentNumber(this.answer),
-      onClick: onWrongClick,
-      style: 'background-color: #FE4A49',
-    });
-    new Text({
-      targetEl: numbersEl,
-      text: getdifferentNumber(this.answer),
-      onClick: onWrongClick,
-      style: 'background-color: #2AB7CA',
-    });
-    new Text({
-      targetEl: numbersEl,
-      text: this.answer,
-      onClick: onAnswerClick,
-      style: 'background-color: #FED766;',
+    shuffleArray(array);
+
+    array.map(({ targetEl, text, onClick }) => {
+      new Text({ targetEl, text, onClick });
     });
   };
   this.render();
