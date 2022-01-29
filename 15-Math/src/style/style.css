@@ -69,7 +69,6 @@ header > span {
   color: white;
   font-size: 9rem;
   font-weight: 900;
-  background-color: #aaa;
   cursor: pointer;
   height: 180px;
   width: 100%;
@@ -78,4 +77,14 @@ header > span {
   align-items: center;
   box-shadow: 5px 5px 5px 1px gray;
   border-radius: 7px;
+}
+
+.numbers span:nth-child(1) {
+  background-color: #FE4A49;
+}
+.numbers span:nth-child(2) {
+  background-color: #2AB7CA;
+}
+.numbers span:nth-child(3) {
+  background-color: #FED766;
 }

@@ -17,27 +17,27 @@ export default function Table({ targetEl, initialState }) {
     new Text({
       targetEl: tableEl,
       text: this.state.number1,
-      style: 'color:#FE4A49',
+      color: '#FE4A49',
     });
     new Text({
       targetEl: tableEl,
       text: this.state.calculation,
-      style: 'color: #2AB7CA',
+      color: ' #2AB7CA',
     });
     new Text({
       targetEl: tableEl,
       text: this.state.number2,
-      style: 'color: #FED766',
+      color: ' #FED766',
     });
     new Text({
       targetEl: tableEl,
       text: '=',
-      style: 'color: #F86624',
+      color: ' #F86624',
     });
     new Text({
       targetEl: tableEl,
       text: '?',
-      style: 'color: gray',
+      color: ' gray',
     });
   };
 
