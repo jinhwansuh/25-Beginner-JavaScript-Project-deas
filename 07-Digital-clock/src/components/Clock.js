@@ -12,9 +12,9 @@ export default function Clock({ targetEl, initialState }) {
 
   this.render = () => {
     clockEl.innerHTML = `
-      ${convertDay[this.state.day]} ${convertTime(
-      this.state.hour
-    )} : ${convertTime(this.state.minute)} ${getMeridiem(this.state.hour)}
+      ${convertDay[this.state.day]} ${convertTime(this.state.hour)} : ${
+      this.state.minute
+    } ${getMeridiem(this.state.hour)}
     `;
   };
 
