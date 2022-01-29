@@ -1,14 +1,8 @@
 import { Input, SelectBox, Button } from './components/index.js';
 
-export default function App({ targetEl }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
-
-  const initialState = {
-    amount: '',
-    guests: '',
-    quality: '',
-  };
 
   this.state = initialState;
 
@@ -37,14 +31,14 @@ export default function App({ targetEl }) {
     targetEl: containerEl,
     state: 'amount',
     children: 'Bill Amount',
-    initialState: this.state,
+    initialState,
     onChange,
   });
   const input2 = new Input({
     targetEl: containerEl,
     state: 'guests',
     children: 'Number of Guests',
-    initialState: this.state,
+    initialState,
     onChange,
   });
   const selectBox = new SelectBox({
