@@ -1,12 +1,12 @@
 import Table from './components/Table.js';
 import Total from './components/Total.js';
 
-export default function App({ targetEl }) {
+export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
-  const initialState = '';
+
   this.state = initialState;
 
-  const total = new Total({ targetEl: containerEl, initialState: this.state });
+  const total = new Total({ targetEl: containerEl, initialState });
 
   const onNumberClick = (text) => {
     this.state += text;
