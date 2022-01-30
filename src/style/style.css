@@ -1,0 +1,45 @@
+html,
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-image: url("../assets/background.png");
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  padding: 50px 120px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.card {
+  height: 400px;
+  width: 380px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  min-height: 120px;
+  min-width: 380px;
+}
