@@ -1,6 +1,6 @@
 export const dataArray = [
   {
-    link: '/01-Colors',
+    link: '/25-Beginner-JavaScript-Project-ideas/01-Colors',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '01-Colors',
@@ -8,7 +8,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/02-Hex-colors-gradient',
+    link: '/25-Beginner-JavaScript-Project-ideas/02-Hex-colors-gradient',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '02-Hex-colors-gradient',
@@ -16,7 +16,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/03-Random-quote-generator',
+    link: '/25-Beginner-JavaScript-Project-ideas/03-Random-quote-generator',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '03-Random-quote-generator',
@@ -24,7 +24,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/04-The-message',
+    link: '/25-Beginner-JavaScript-Project-ideas/04-The-message',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: 'The message',
@@ -32,7 +32,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/05-Counter',
+    link: '/25-Beginner-JavaScript-Project-ideas/05-Counter',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '05-Counter',
@@ -40,7 +40,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/06-Image-carousel',
+    link: '/25-Beginner-JavaScript-Project-ideas/06-Image-carousel',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '06-Image-carousel',
@@ -48,7 +48,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/07-Digital-clock',
+    link: '/25-Beginner-JavaScript-Project-ideas/07-Digital-clock',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '07-Digital-clock',
@@ -56,7 +56,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/08-Calculator',
+    link: '/25-Beginner-JavaScript-Project-ideas/08-Calculator',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '08-Calculator',
@@ -64,7 +64,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/09-Grocery-list',
+    link: '/25-Beginner-JavaScript-Project-ideas/09-Grocery-list',
     imageUrl:
       'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455__340.jpg',
     title: 'Grocery List',
@@ -73,7 +73,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/10-Tip-calculator',
+    link: '/25-Beginner-JavaScript-Project-ideas/10-Tip-calculator',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '10-Tip-calculator',
@@ -81,7 +81,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/11-Flashcards',
+    link: '/25-Beginner-JavaScript-Project-ideas/11-Flashcards',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '11-Flashcards',
@@ -89,7 +89,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/12-Todo-list',
+    link: '/25-Beginner-JavaScript-Project-ideas/12-Todo-list',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: 'Grocery List',
@@ -97,7 +97,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/13-Sticky-notes',
+    link: '/25-Beginner-JavaScript-Project-ideas/13-Sticky-notes',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '13-Sticky-notes',
@@ -105,7 +105,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/14-Timer',
+    link: '/25-Beginner-JavaScript-Project-ideas/14-Timer',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '14-Timer',
@@ -113,7 +113,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/15-Math',
+    link: '/25-Beginner-JavaScript-Project-ideas/15-Math',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '15-Math',
@@ -121,7 +121,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/16-Unsplash-API',
+    link: '/25-Beginner-JavaScript-Project-ideas/16-Unsplash-API',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '16-Unsplash-API',
@@ -129,7 +129,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/17-Typewriter',
+    link: '/25-Beginner-JavaScript-Project-ideas/17-Typewriter',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '17-Typewriter',
@@ -137,7 +137,7 @@ export const dataArray = [
     color: 'tomato',
   },
   {
-    link: '/18-Square-cards',
+    link: '/25-Beginner-JavaScript-Project-ideas/18-Square-cards',
     imageUrl:
       'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
     title: '18-Square-cards',
@@ -145,23 +145,3 @@ export const dataArray = [
     color: 'tomato',
   },
 ];
-
-/* 
-  {
-    link: '/18-Square-cards',
-    imageUrl:
-      'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnJlZXxlbnwwfHwwfHw%3D&w=1000&q=80',
-    title: '18-Square-cards',
-    description: 'Need groceries? le',
-    color: 'tomato',
-  },
-
-
-  {
-    link: ,
-    imageUrl: string,
-    title: string,
-    description: string,
-    style: string 'white',
-  },
-*/
