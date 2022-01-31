@@ -7,28 +7,44 @@ p {
   margin: 0;
   padding: 0;
 }
+h1 {
+  font-size: 1.8rem;
+}
 
 main {
   background-image: url("../assets/background.png");
   background-size: 100% 100%;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
 .container {
   display: flex;
-  padding: 50px 120px;
+  padding: 50px 100px;
   box-sizing: border-box;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-  height: 400px;
+  position: relative;
   width: 380px;
   cursor: pointer;
-  margin: 20px;
+  margin: 20px 0;
+  box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 50%);
+  transition: 1s;
 }
 
-img {
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover img {
+  opacity: 0.4;
+}
+
+.card img {
+  display: block;
   width: 100%;
   object-fit: cover;
 }
@@ -40,6 +56,6 @@ img {
   text-align: center;
   padding: 15px;
   box-sizing: border-box;
-  min-height: 120px;
-  min-width: 380px;
+  height: 120px;
+  color: white;
 }
