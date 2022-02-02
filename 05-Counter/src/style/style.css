@@ -8,7 +8,7 @@ h1 {
 }
 
 body {
-  background-color: rgb(228, 243, 88);
+  background-color: rgb(248, 245, 74);
 }
 
 main {
@@ -22,7 +22,7 @@ main {
   border: 6px solid;
   height: 350px;
   width: 600px;
-  background-color: rgb(238, 230, 230);
+  background-color: rgb(250, 255, 238);
   display: flex;
   flex-direction: column;
   justify-content: center;
