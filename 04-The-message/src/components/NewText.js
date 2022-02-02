@@ -9,9 +9,7 @@ export default function NewText({ targetEl, initialState }) {
   };
 
   this.render = () => {
-    newTextEl.innerHTML = `
-      ${this.state}
-    `;
+    newTextEl.innerHTML = `${this.state}`;
   };
 
   this.render();

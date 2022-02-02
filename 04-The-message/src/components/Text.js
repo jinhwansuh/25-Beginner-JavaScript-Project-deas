@@ -1,12 +1,7 @@
-export default function Text({ targetEl, text }) {
-  const textEl = document.createElement('div');
+export default function Text({ targetEl, tag, text }) {
+  const textEl = document.createElement(tag);
 
-  this.render = () => {
-    textEl.innerHTML = `
-      ${text}
-    `;
-  };
-  this.render();
+  textEl.textContent = text;
 
   targetEl.appendChild(textEl);
 }

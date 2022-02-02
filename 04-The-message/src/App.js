@@ -11,8 +11,8 @@ export default function App({ targetEl, initialState }) {
     newText.setState(nextState);
   };
 
-  new Text({ targetEl: containerEl, text: 'Pass the message' });
-  new Text({ targetEl: containerEl, text: 'Enter a message' });
+  new Text({ targetEl: containerEl, tag: 'h3', text: 'Pass the message' });
+  new Text({ targetEl: containerEl, tag: 'label', text: 'Enter a message' });
   new InputForm({ targetEl: containerEl, onSubmit });
   const newText = new NewText({ targetEl: containerEl, initialState });
 
