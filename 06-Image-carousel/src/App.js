@@ -1,5 +1,5 @@
 import { imageArray } from './assets/images.js';
-import { Image, Button, IndexImage } from './components/index.js';
+import { ImageWrapper, IndexImage } from './components/domain/index.js';
 
 export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
@@ -10,7 +10,7 @@ export default function App({ targetEl, initialState }) {
 
   this.setState = (nextState) => {
     this.state = nextState;
-    image.setState(imageArray[this.state]);
+    imageWrapper.setState(imageArray[this.state]);
     indexImage.setState(this.state);
   };
 
@@ -23,20 +23,11 @@ export default function App({ targetEl, initialState }) {
     this.setState(nextState);
   };
 
-  const image = new Image({
+  const imageWrapper = new ImageWrapper({
     targetEl: containerEl,
     initialState: imageArray[this.state],
-  });
-
-  new Button({
-    targetEl: containerEl,
-    state: '<',
-    onClick: onPrevClick,
-  });
-  new Button({
-    targetEl: containerEl,
-    state: '>',
-    onClick: onNextClick,
+    onPrevClick,
+    onNextClick,
   });
 
   const indexImage = new IndexImage({
