@@ -20,7 +20,14 @@ export default function App({ targetEl, initialState }) {
     console.log(data);
   };
 
-  const onToggleClick = () => {};
+  const onToggleClick = () => {
+    const slideEl = document.querySelector('.slide');
+    if (slideEl.className === 'slide in') {
+      slideEl.className = 'slide out';
+    } else {
+      slideEl.className = 'slide in';
+    }
+  };
   const onSearchSubmit = (city) => {
     fetchWeather(city);
   };
