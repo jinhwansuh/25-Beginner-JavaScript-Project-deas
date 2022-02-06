@@ -1,0 +1,38 @@
+html,
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+.container {
+  height: 100%;
+}
+
+.toggle {
+  position: absolute;
+  z-index: 100;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 100%;
+  background-color: #eee;
+  opacity: 0.5;
+}
+
+.details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: translate(-50%, -50%);
+  display: flex;
+}

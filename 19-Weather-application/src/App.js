@@ -4,6 +4,7 @@ import { Button } from './components/base/index.js';
 
 export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
+  containerEl.className = 'container';
   this.state = initialState;
 
   const fetchWeather = async (city) => {

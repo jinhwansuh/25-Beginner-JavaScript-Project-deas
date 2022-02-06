@@ -2,6 +2,7 @@ import { Text } from '../base/index.js';
 
 export default function Wrapper({ targetEl }) {
   const wrapperEl = document.createElement('div');
+  wrapperEl.className = 'details';
 
   this.setState = (nextState) => {
     this.state = nextState;
