@@ -1,5 +1,6 @@
-export default function Number({ targetEl, state, onClick }) {
+export default function Number({ targetEl, state, color, onClick }) {
   const numberEl = document.createElement('button');
+  numberEl.style.backgroundColor = color;
   numberEl.textContent = state;
 
   numberEl.addEventListener('click', (e) => {
