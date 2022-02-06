@@ -1,4 +1,4 @@
-import Number from './Number.js';
+import { Number } from '../base/index.js';
 
 export default function Table({
   targetEl,
@@ -6,12 +6,14 @@ export default function Table({
   onCountClick,
   onClearClick,
 }) {
-  const tableEl = document.createElement('table');
-  const trEl1 = document.createElement('tr');
-  const trEl2 = document.createElement('tr');
-  const trEl3 = document.createElement('tr');
-  const trEl4 = document.createElement('tr');
-  const trEl5 = document.createElement('tr');
+  const tableEl = document.createElement('div');
+  tableEl.className = 'table';
+
+  const trEl1 = document.createElement('div');
+  const trEl2 = document.createElement('div');
+  const trEl3 = document.createElement('div');
+  const trEl4 = document.createElement('div');
+  const trEl5 = document.createElement('div');
   tableEl.setAttribute('border', '2');
 
   new Number({
@@ -105,5 +107,6 @@ export default function Table({
   tableEl.appendChild(trEl3);
   tableEl.appendChild(trEl4);
   tableEl.appendChild(trEl5);
+
   targetEl.appendChild(tableEl);
 }
