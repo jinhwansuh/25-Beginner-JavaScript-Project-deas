@@ -23,13 +23,13 @@ export default function ImageWrapper({
     new Button({
       targetEl: wrapperEl,
       state: '<',
-      className: 'btn-prev',
+      className: 'btn prev',
       onClick: onPrevClick,
     });
     new Button({
       targetEl: wrapperEl,
       state: '>',
-      className: 'btn-next',
+      className: 'btn next',
       onClick: onNextClick,
     });
   };
