@@ -16,7 +16,7 @@ export default function TodoList({ targetEl, initialState, onToggle }) {
       new TodoItem({
         targetEl: todoListEl,
         isCompleted,
-        text,
+        text: '- ' + text,
         index,
         onClick: onToggle,
       });

@@ -1,4 +1,4 @@
-import { Button, Input } from '../base/index.js';
+import { GoogleIcon, Input } from '../base/index.js';
 
 export default function TodoForm({ targetEl, onSubmit, onClearStorage }) {
   const todoFormEl = document.createElement('form');
@@ -13,20 +13,14 @@ export default function TodoForm({ targetEl, onSubmit, onClearStorage }) {
     }
   });
 
-  new Button({
+  new GoogleIcon({
     targetEl: todoFormEl,
-    text: '지우기',
-    type: 'button',
+    className: 'material-icons',
+    name: 'edit',
     onClick: onClearStorage,
   });
 
   new Input({ targetEl: todoFormEl });
-
-  new Button({
-    targetEl: todoFormEl,
-    text: 'Add',
-    type: 'submit',
-  });
 
   targetEl.appendChild(todoFormEl);
 }
