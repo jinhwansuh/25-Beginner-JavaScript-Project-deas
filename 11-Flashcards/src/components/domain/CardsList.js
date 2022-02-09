@@ -1,3 +1,5 @@
+import CardItem from './CardItem.js';
+
 export default function CardsList({ targetEl, initialState }) {
   const cardsListEl = document.createElement('div');
   cardsListEl.className = 'card-list';
@@ -19,16 +21,11 @@ export default function CardsList({ targetEl, initialState }) {
   });
 
   this.render = () => {
-    cardsListEl.innerHTML = `
-      ${this.state
-        ?.map(
-          (card) => `<div class="card">
-        <div class="question">${card.question}</div>
-        <div class="answer" style="display: none">${card.answer}</div>
-      </div>`
-        )
-        .join('')}
-    `;
+    cardsListEl.innerHTML = '';
+
+    this.state?.map((card) => {
+      new CardItem({ targetEl: cardsListEl, state: card });
+    });
   };
 
   this.render();
