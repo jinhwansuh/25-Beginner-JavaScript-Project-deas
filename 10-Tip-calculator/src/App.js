@@ -1,4 +1,4 @@
-import { Input, SelectBox, Button } from './components/index.js';
+import { Input, Text, Toast, SelectBox, Button } from './components/index.js';
 import { calculateTip } from './utils/calculate.js';
 
 export default function App({ targetEl, initialState }) {
@@ -22,28 +22,33 @@ export default function App({ targetEl, initialState }) {
   const onClick = () => {
     const { amount, guests, quality } = this.state;
     if (amount && guests && quality) {
-      alert(calculateTip(amount, quality, guests).toFixed(2));
+      toast.render(calculateTip(amount, quality, guests).toFixed(2));
       this.setState(initialState);
     }
   };
 
+  const toast = new Toast({ time: 3000 });
+  new Text({ targetEl: containerEl, tag: 'h3', text: 'Tip Calculator' });
   const billAmountInput = new Input({
     targetEl: containerEl,
+    initialState,
     state: 'amount',
     children: 'Bill Amount',
-    initialState,
+    iconName: 'attach_money',
     onChange,
   });
   const guestsInput = new Input({
     targetEl: containerEl,
+    initialState,
     state: 'guests',
     children: 'Number of Guests',
-    initialState,
+    iconName: 'person',
     onChange,
   });
   const selectBox = new SelectBox({
     targetEl: containerEl,
     state: 'quality',
+    children: 'Service Quality',
     onChange,
   });
   new Button({ targetEl: containerEl, state: 'Calculate', onClick });

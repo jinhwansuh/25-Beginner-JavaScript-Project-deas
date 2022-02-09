@@ -3,7 +3,7 @@ import { Text, Button } from '../base/index.js';
 export default function Header({ targetEl, onAddClick, onDeleteClick }) {
   const headerEl = document.createElement('header');
 
-  new Text({ targetEl: headerEl, text: 'Flashcards' });
+  new Text({ targetEl: headerEl, tag: 'h1', text: 'Flashcards' });
   new Button({ targetEl: headerEl, state: 'Add Card', onClick: onAddClick });
   new Button({
     targetEl: headerEl,

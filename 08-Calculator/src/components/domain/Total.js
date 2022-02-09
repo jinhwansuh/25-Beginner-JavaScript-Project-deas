@@ -1,5 +1,7 @@
 export default function Total({ targetEl, initialState }) {
   const totalEl = document.createElement('div');
+  totalEl.className = 'total';
+
   this.state = initialState;
 
   this.setState = (nextState) => {

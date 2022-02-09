@@ -1,4 +1,5 @@
-import { ClearButton, TodoForm, TodoList } from './components/index.js';
+import { TodoForm, TodoList } from './components/domain/index.js';
+import { Text } from './components/base/index.js';
 import {
   getSessionStorage,
   removeStorage,
@@ -7,6 +8,8 @@ import {
 
 export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
+  containerEl.className = 'container';
+
   this.state = getSessionStorage();
 
   this.setState = (nextState) => {
@@ -32,17 +35,13 @@ export default function App({ targetEl }) {
     this.setState(nextState);
   };
 
-  new ClearButton({
-    targetEl: containerEl,
-    state: '지우기',
-    onClick: onClearStorage,
-  });
-
-  new TodoForm({ targetEl: containerEl, onSubmit });
+  new Text({ targetEl: containerEl, tag: 'h1', text: 'Grocery List' });
+  new TodoForm({ targetEl: containerEl, onSubmit, onClearStorage });
   const todoList = new TodoList({
     targetEl: containerEl,
     initialState: this.state,
     onToggle,
   });
+
   targetEl.appendChild(containerEl);
 }

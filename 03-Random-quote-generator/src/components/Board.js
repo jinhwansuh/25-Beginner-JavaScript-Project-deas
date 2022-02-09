@@ -12,7 +12,7 @@ export default function Board({ targetEl, initialState }) {
   this.render = () => {
     boardEl.innerHTML = `
       <div>"${this.state.content}"</div>
-      <div>${this.state.author}</div>
+      <div>- ${this.state.author}</div>
     `;
   };
 

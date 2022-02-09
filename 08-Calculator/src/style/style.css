@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(247, 247, 163), rgb(238, 237, 237));
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  background-color: rgba(245, 231, 231, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.total {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  background-color: #eee;
+  justify-content: end;
+  align-items: center;
+  font-size: 40px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  margin-top: 10px;
+}
+.table > div {
+  margin: 3px 0;
+}
+
+.table button {
+  width: 25%;
+  height: 60px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.table button:hover {
+  background-color: #ddd;
+}
+
+.table div:nth-last-of-type(1) > button {
+  width: 100%;
+}

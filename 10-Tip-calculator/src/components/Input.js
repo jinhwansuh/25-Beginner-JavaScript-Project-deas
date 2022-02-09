@@ -3,6 +3,7 @@ export default function Input({
   state,
   children,
   initialState,
+  iconName,
   onChange,
 }) {
   const inputEl = document.createElement('div');
@@ -15,14 +16,18 @@ export default function Input({
   };
 
   inputEl.addEventListener('change', (e) => {
-    const target = document.querySelector(`#${state}`);
-    onChange({ [state]: target.value });
+    if (e.target.value) {
+      onChange({ [state]: e.target.value });
+    }
   });
 
   this.render = () => {
     inputEl.innerHTML = `
-      <label for="${state}">${children}</label>
-      <input type="number" id="${state}" value="${this.state[state]}" />
+      <label for=${state}>${children}</label>
+      <div>
+        <span class="material-icons">${iconName}</span>
+        <input type="number" id="${state}" value="${this.state[state]}" />
+      </div>
     `;
   };
 

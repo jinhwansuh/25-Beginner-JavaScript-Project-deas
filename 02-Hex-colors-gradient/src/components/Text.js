@@ -14,7 +14,7 @@ export default function Text({ targetEl, initialState }) {
   this.render = () => {
     textEl.innerHTML = `
       <div>CLICK THE BUTTON BELLOW TO GENERATE A RANDOM GRADIENT HEX COLOR COMBINATION</div>
-      background: linear-gradient(to right, ${this.state.color1}, ${this.state.color2})
+      <div>background: linear-gradient(to right, ${this.state.color1}, ${this.state.color2})</div>
     `;
   };
 

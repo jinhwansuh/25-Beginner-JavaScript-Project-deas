@@ -1,7 +1,8 @@
-import { Total, Table } from './components/index.js';
+import { Total, Table } from './components/domain/index.js';
 
 export default function App({ targetEl, initialState }) {
   const containerEl = document.createElement('div');
+  containerEl.className = 'container';
 
   this.state = initialState;
 
