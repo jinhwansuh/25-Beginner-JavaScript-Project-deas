@@ -9,6 +9,7 @@ export default function Toast({ time }) {
 
     setTimeout(() => {
       toastEl.style.display = 'none';
+      // toastEl.innerHTML = '';
     }, time);
   };
 
