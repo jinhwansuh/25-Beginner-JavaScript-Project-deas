@@ -46,7 +46,8 @@ main {
 .card img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: fill;
+  height: 190px;
 }
 
 .details {
@@ -58,4 +59,8 @@ main {
   box-sizing: border-box;
   height: 120px;
   color: white;
+}
+
+.details p {
+  margin-top: 10px;
 }
