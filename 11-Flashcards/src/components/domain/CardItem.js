@@ -4,12 +4,16 @@ export default function CardItem({ targetEl, state }) {
   const cardItemEl = document.createElement('div');
   cardItemEl.className = 'card';
 
-  cardItemEl.addEventListener('click', (e) => {});
+  cardItemEl.addEventListener('click', (e) => {
+    const answerEl = cardItemEl.querySelector('.answer');
+    const displayState = answerEl.style.display;
+    answerEl.style.display = displayState === 'block' ? 'none' : 'block';
+  });
 
   new Text({
     targetEl: cardItemEl,
     className: 'question',
-    tag: 'p',
+    tag: 'h2',
     text: state.question,
   });
   new Text({
