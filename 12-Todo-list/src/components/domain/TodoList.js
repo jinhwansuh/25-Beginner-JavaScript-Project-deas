@@ -7,6 +7,7 @@ export default function TodoList({
   onCheckClick,
 }) {
   const todoListEl = document.createElement('div');
+  todoListEl.className = 'todo-list';
   this.state = initialState;
 
   this.setState = (nextState) => {
@@ -40,10 +41,12 @@ export default function TodoList({
         .map(
           ({ id, content, isCompleted }) =>
             `<div class="todo-item" data-id="${id}">${content}
-              <button type="button" class="btn check ${
-                isCompleted ? 'checked' : ''
-              }">check</button>
-              <button type="button" class="delete">del</button>
+              <div>
+                <button type="button" class="btn check ${
+                  isCompleted ? 'checked' : ''
+                }">check</button>
+                <button type="button" class="delete">del</button>
+              </div>
           </div>`
         )
         .join('')}
