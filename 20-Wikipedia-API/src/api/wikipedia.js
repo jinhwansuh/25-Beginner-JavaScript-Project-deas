@@ -9,7 +9,7 @@ const WIKIPEDIA_END_POINT =
 export const getWikiData = async (value, count) => {
   try {
     const res = await fetch(
-      `https://en.wikipedia.org/w/api.php?action=query&origin=*&pilicense=any&prop=pageimages&pithumbsize=250&format=json&gsrlimit=10&gsroffset=${count}&generator=search&gsrsearch=${value}`
+      `https://en.wikipedia.org/w/api.php?action=query&origin=*&pilicense=any&prop=pageimages&pithumbsize=250&format=json&gsrlimit=30&gsroffset=${count}&generator=search&gsrsearch=${value}`
     );
 
     if (!res.ok) {
