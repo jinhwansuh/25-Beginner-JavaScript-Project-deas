@@ -4,11 +4,13 @@
   https://en.wikipedia.org/?curid=7605
  */
 const WIKIPEDIA_END_POINT =
-  'https://en.wikipedia.org/w/api.php?action=query&origin=*&pilicense=any&prop=pageimages&pithumbsize=250&format=json&gsrlimit=500&gsroffset=18&generator=search&gsrsearch=';
+  'https://en.wikipedia.org/w/api.php?action=query&origin=*&pilicense=any&prop=pageimages&pithumbsize=250&format=json&gsrlimit=10&gsroffset=10&generator=search&gsrsearch=';
 
-export const getWikiData = async (value) => {
+export const getWikiData = async (value, count) => {
   try {
-    const res = await fetch(`${WIKIPEDIA_END_POINT}${value}`);
+    const res = await fetch(
+      `https://en.wikipedia.org/w/api.php?action=query&origin=*&pilicense=any&prop=pageimages&pithumbsize=250&format=json&gsrlimit=10&gsroffset=${count}&generator=search&gsrsearch=${value}`
+    );
 
     if (!res.ok) {
       throw new Error('API Call Fail');
