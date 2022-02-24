@@ -22,5 +22,12 @@ export default function ItemList({ targetEl, data }) {
         });
   };
 
+  /* window.addEventListener('scroll', (e) => {
+    const isScrollEnded = window.innerHeight
+    console.log('*******************');
+    console.log(window.innerHeight);
+    console.log(window.scrollY);
+    console.log(document.body.offsetHeight);
+  }); */
   targetEl.appendChild(itemListEl);
 }

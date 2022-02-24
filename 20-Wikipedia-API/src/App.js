@@ -4,9 +4,10 @@ import { Form, ItemList } from './components/domain/index.js';
 export default function App({ targetEl }) {
   this.state = {
     limit: 30,
-    nextStart: 0,
+    offset: 0,
     data: [],
     isLoading: false,
+    value: '',
   };
 
   this.setState = (nextState) => {
@@ -14,19 +15,23 @@ export default function App({ targetEl }) {
     itemList.setState(this.state.data);
   };
 
-  let count = 0;
   const handleSubmit = async (value) => {
-    const data = await getWikiData(value, count);
-    console.log(data, count);
-    count += 10;
+    const data = await getWikiData(value, 0);
     if (data.query) {
       this.setState({
         ...this.state,
-        data: [...this.state.data, ...Object.values(data.query.pages)],
+        value,
+        offset: this.state.limit,
+        data: [...Object.values(data.query.pages)],
       });
+
+      const items = document.querySelectorAll('.item');
+      observeLastItem(io, items);
     } else {
       this.setState({
         ...this.state,
+        value: '',
+        offset: 0,
         data: [],
       });
     }
@@ -34,4 +39,32 @@ export default function App({ targetEl }) {
 
   new Form({ targetEl, onSubmit: handleSubmit });
   const itemList = new ItemList({ targetEl });
+
+  const observeLastItem = (io, items) => {
+    const lastItem = items[items.length - 1];
+    io.observe(lastItem);
+  };
+
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(async (entry) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          console.log(entry.target);
+          const data = await getWikiData(this.state.value, this.state.offset);
+          if (data.query) {
+            this.setState({
+              ...this.state,
+              offset: this.state.offset + this.state.limit,
+              data: [...this.state.data, ...Object.values(data.query.pages)],
+            });
+            observeLastItem(observer, document.querySelectorAll('.item'));
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+    }
+  );
 }

@@ -2,6 +2,8 @@ import { Image, Text } from '../base/index.js';
 
 export default function Item({ targetEl, data }) {
   const itemEl = document.createElement('div');
+  itemEl.className = 'item';
+
   const { pageid, thumbnail, title } = data;
 
   itemEl.addEventListener('click', (e) => {
