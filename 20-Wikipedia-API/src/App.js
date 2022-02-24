@@ -13,6 +13,9 @@ export default function App({ targetEl }) {
   this.setState = (nextState) => {
     this.state = nextState;
     itemList.setState(this.state.data);
+
+    const items = document.querySelectorAll('.item');
+    setTimeout(() => observeLastItem(io, items), 0);
   };
 
   const handleSubmit = async (value) => {
@@ -24,9 +27,6 @@ export default function App({ targetEl }) {
         offset: this.state.limit,
         data: [...Object.values(data.query.pages)],
       });
-
-      const items = document.querySelectorAll('.item');
-      observeLastItem(io, items);
     } else {
       this.setState({
         ...this.state,
@@ -36,9 +36,6 @@ export default function App({ targetEl }) {
       });
     }
   };
-
-  new Form({ targetEl, onSubmit: handleSubmit });
-  const itemList = new ItemList({ targetEl });
 
   const observeLastItem = (io, items) => {
     const lastItem = items[items.length - 1];
@@ -50,7 +47,6 @@ export default function App({ targetEl }) {
       entries.forEach(async (entry) => {
         if (entry.isIntersecting) {
           observer.unobserve(entry.target);
-          console.log(entry.target);
           const data = await getWikiData(this.state.value, this.state.offset);
           if (data.query) {
             this.setState({
@@ -58,7 +54,7 @@ export default function App({ targetEl }) {
               offset: this.state.offset + this.state.limit,
               data: [...this.state.data, ...Object.values(data.query.pages)],
             });
-            observeLastItem(observer, document.querySelectorAll('.item'));
+            // observeLastItem(observer, document.querySelectorAll('.item'));
           }
         }
       });
@@ -67,4 +63,7 @@ export default function App({ targetEl }) {
       threshold: 0.5,
     }
   );
+
+  new Form({ targetEl, onSubmit: handleSubmit });
+  const itemList = new ItemList({ targetEl });
 }
