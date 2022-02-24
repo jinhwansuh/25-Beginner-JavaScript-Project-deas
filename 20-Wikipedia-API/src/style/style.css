@@ -25,3 +25,9 @@ h2 {
 .item img {
   width: 250px;
 }
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}

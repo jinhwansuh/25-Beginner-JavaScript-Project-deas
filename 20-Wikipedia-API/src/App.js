@@ -1,4 +1,5 @@
 import { getWikiData } from './api/wikipedia.js';
+import { Button } from './components/base/index.js';
 import { Form, ItemList } from './components/domain/index.js';
 
 export default function App({ targetEl }) {
@@ -41,6 +42,10 @@ export default function App({ targetEl }) {
     window.open(`https://en.wikipedia.org/?curid=${id}`);
   };
 
+  const handleScrollTopClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const observeLastItem = (io, items) => {
     const lastItem = items[items.length - 1];
     io.observe(lastItem);
@@ -70,4 +75,10 @@ export default function App({ targetEl }) {
 
   new Form({ targetEl, onSubmit: handleSubmit });
   const itemList = new ItemList({ targetEl, handleItemClick });
+  new Button({
+    targetEl,
+    text: '맨위로',
+    className: 'scroll-top',
+    onClick: handleScrollTopClick,
+  });
 }
