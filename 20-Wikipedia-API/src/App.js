@@ -37,6 +37,10 @@ export default function App({ targetEl }) {
     }
   };
 
+  const handleItemClick = (id) => {
+    window.open(`https://en.wikipedia.org/?curid=${id}`);
+  };
+
   const observeLastItem = (io, items) => {
     const lastItem = items[items.length - 1];
     io.observe(lastItem);
@@ -65,5 +69,5 @@ export default function App({ targetEl }) {
   );
 
   new Form({ targetEl, onSubmit: handleSubmit });
-  const itemList = new ItemList({ targetEl });
+  const itemList = new ItemList({ targetEl, handleItemClick });
 }

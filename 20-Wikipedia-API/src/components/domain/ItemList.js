@@ -1,7 +1,7 @@
 import { Text } from '../base/index.js';
 import Item from './Item.js';
 
-export default function ItemList({ targetEl }) {
+export default function ItemList({ targetEl, handleItemClick }) {
   const itemListEl = document.createElement('section');
 
   this.setState = (nextState) => {
@@ -13,7 +13,9 @@ export default function ItemList({ targetEl }) {
     itemListEl.innerHTML = '';
 
     this.state.length
-      ? this.state.map((data) => new Item({ targetEl: itemListEl, data }))
+      ? this.state.map(
+          (data) => new Item({ targetEl: itemListEl, data, handleItemClick })
+        )
       : new Text({
           targetEl: itemListEl,
           tag: 'h1',
