@@ -1,0 +1,33 @@
+html,
+body,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+}
+
+header {
+  background-color: #eee;
+}
+
+.container {
+  display: flex;
+}
+
+.quiz-create {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #ddd;
+  flex: 2;
+}
+
+.quiz-list {
+  background-color: #aaa;
+  flex: 5;
+}
