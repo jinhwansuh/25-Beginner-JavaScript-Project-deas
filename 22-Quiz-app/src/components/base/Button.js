@@ -3,7 +3,9 @@ export default function Button({ targetEl, text, onClick }) {
   buttonEl.textContent = text;
 
   buttonEl.addEventListener('click', (e) => {
-    onClick();
+    if (onClick) {
+      onClick();
+    }
   });
 
   targetEl.appendChild(buttonEl);
