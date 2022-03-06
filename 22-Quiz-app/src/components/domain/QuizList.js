@@ -1,11 +1,11 @@
+import { Button } from '../base/index.js';
 import QuizItem from './QuizItem.js';
 
-export default function QuizList({ targetEl, onAnswerChange }) {
+export default function QuizList({ targetEl, onAnswerChange, onAnswerSubmit }) {
   const quizListEl = document.createElement('div');
   quizListEl.className = 'quiz-list';
 
   this.setState = (nextState) => {
-    console.log(nextState);
     this.state = nextState;
     this.render();
   };
@@ -20,6 +20,14 @@ export default function QuizList({ targetEl, onAnswerChange }) {
         index: index + 1,
         onChange: onAnswerChange,
       });
+    });
+
+    new Button({
+      targetEl: quizListEl,
+      text: 'submit',
+      display: 'none',
+      className: 'task-button',
+      onClick: onAnswerSubmit,
     });
   };
 

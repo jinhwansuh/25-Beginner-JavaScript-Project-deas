@@ -3,6 +3,7 @@ export default function Button({
   text,
   className,
   onClick,
+  state,
   display,
 }) {
   const buttonEl = document.createElement('button');
@@ -11,6 +12,10 @@ export default function Button({
   display && (buttonEl.style.display = display);
 
   buttonEl.addEventListener('click', (e) => {
+    if (onClick && state) {
+      onClick(state);
+      return;
+    }
     if (onClick) {
       onClick();
     }

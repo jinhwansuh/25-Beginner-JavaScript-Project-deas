@@ -15,7 +15,7 @@ export default function App({ targetEl }) {
     answer2: '',
     answer3: '',
     answer4: '',
-    rightAnswer: 'answer1',
+    rightAnswer: '',
     checked: '',
   };
 
@@ -29,6 +29,10 @@ export default function App({ targetEl }) {
 
   const onInputChange = (state, value) => {
     const nextInputState = { ...this.inputState, [state]: value };
+    this.inputState = nextInputState;
+  };
+  const onAnswerClick = (state) => {
+    const nextInputState = { ...this.inputState, rightAnswer: state };
     this.inputState = nextInputState;
   };
 
@@ -92,6 +96,7 @@ export default function App({ targetEl }) {
     targetEl: containerEl,
     onInputChange,
     onAddQuizClick,
+    onAnswerClick,
     onTaskQuizClick,
     onDeleteQuizClick,
   });
