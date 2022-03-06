@@ -1,4 +1,9 @@
-import { Header, QuizCreate, QuizList } from './components/domain/index.js';
+import {
+  Header,
+  QuizCreate,
+  QuizList,
+  QuizResult,
+} from './components/domain/index.js';
 
 export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
@@ -50,11 +55,14 @@ export default function App({ targetEl }) {
     }
   };
 
-  const onQuizStartClick = () => {
-    // 비활성화 하고
-    // 퀴즈 시작
+  const onTaskQuizClick = () => {
     if (this.state.length > 0) {
-      // setState add
+      const buttonList = document.querySelectorAll('.quiz-button');
+      const taskButtonEl = document.querySelector('.task-button');
+      buttonList.forEach((buttonEl) => {
+        buttonEl.disabled = true;
+      });
+      taskButtonEl.style.display = 'block';
     } else {
       alert('please complete the form');
     }
@@ -65,14 +73,18 @@ export default function App({ targetEl }) {
     this.setState(nextState);
   };
 
-  const onAnswerChange = (answerIndex, answer) => {
-    const nextState = this.state.map((a, index) => {
+  const onAnswerChange = (answerIndex, checked) => {
+    const nextState = this.state.map((answer, index) => {
       if (answerIndex === index) {
-        return { ...a, checked: answer };
+        return { ...answer, checked };
       }
-      return a;
+      return answer;
     });
     this.state = nextState;
+  };
+  const onAnswerSubmit = () => {
+    const quizListEl = document.querySelector('.quiz-list');
+    new QuizResult({ targetEl: quizListEl, answerList: this.state });
   };
 
   new Header({ targetEl });
@@ -80,10 +92,14 @@ export default function App({ targetEl }) {
     targetEl: containerEl,
     onInputChange,
     onAddQuizClick,
-    onQuizStartClick,
+    onTaskQuizClick,
     onDeleteQuizClick,
   });
-  const quizList = new QuizList({ targetEl: containerEl, onAnswerChange });
+  const quizList = new QuizList({
+    targetEl: containerEl,
+    onAnswerChange,
+    onAnswerSubmit,
+  });
 
   targetEl.appendChild(containerEl);
 }
