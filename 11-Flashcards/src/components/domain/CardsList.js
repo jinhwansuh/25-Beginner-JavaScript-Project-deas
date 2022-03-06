@@ -10,16 +10,6 @@ export default function CardsList({ targetEl, initialState }) {
     this.render();
   };
 
-  cardsListEl.addEventListener('click', (e) => {
-    const targetEl = e.target;
-    if (targetEl.className === 'card') {
-      const cardEl = e.target.closest('.card');
-      const answerEl = cardEl.querySelector('.answer');
-      const displayState = answerEl.style.display;
-      answerEl.style.display = displayState === 'block' ? 'none' : 'block';
-    }
-  });
-
   this.render = () => {
     cardsListEl.innerHTML = '';
 
