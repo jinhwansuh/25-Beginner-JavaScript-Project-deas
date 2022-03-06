@@ -11,6 +11,7 @@ export default function App({ targetEl }) {
     answer3: '',
     answer4: '',
     rightAnswer: 'answer1',
+    checked: '',
   };
 
   this.inputState = initialInputState;
@@ -18,6 +19,7 @@ export default function App({ targetEl }) {
 
   this.setState = (nextState) => {
     this.state = nextState;
+    console.log(this.state);
     quizList.setState(nextState);
   };
 
@@ -40,7 +42,6 @@ export default function App({ targetEl }) {
     ) {
       const nextState = [...this.state, this.inputState];
       this.setState(nextState);
-      // setState add
     } else {
       alert('please complete the form');
     }
@@ -60,6 +61,17 @@ export default function App({ targetEl }) {
     const nextState = [];
     this.setState(nextState);
   };
+
+  const onAnswerChange = (answerIndex, answer) => {
+    const nextState = this.state.map((a, index) => {
+      if (answerIndex === index) {
+        return { ...a, checked: answer };
+      }
+      return a;
+    });
+    this.state = nextState;
+  };
+
   new Header({ targetEl });
   new QuizCreate({
     targetEl: containerEl,
@@ -68,7 +80,7 @@ export default function App({ targetEl }) {
     onQuizStartClick,
     onDeleteQuizClick,
   });
-  const quizList = new QuizList({ targetEl: containerEl });
+  const quizList = new QuizList({ targetEl: containerEl, onAnswerChange });
 
   targetEl.appendChild(containerEl);
 }

@@ -3,13 +3,17 @@ export default function Input({
   type = 'text',
   state,
   id,
+  name,
   placeholder = '',
   onChange,
+  checked,
 }) {
   const inputEl = document.createElement('input');
   inputEl.type = type;
   inputEl.placeholder = placeholder;
-  id ? (inputEl.id = id) : '';
+  id && (inputEl.id = id);
+  name && (inputEl.name = name);
+  checked && (inputEl.checked = true);
 
   inputEl.addEventListener('change', (e) => {
     const inputValue = e.target.value;
