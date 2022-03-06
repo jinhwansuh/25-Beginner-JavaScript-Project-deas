@@ -19,14 +19,12 @@ export default function App({ targetEl }) {
 
   this.setState = (nextState) => {
     this.state = nextState;
-    console.log(this.state);
     quizList.setState(nextState);
   };
 
   const onInputChange = (state, value) => {
     const nextInputState = { ...this.inputState, [state]: value };
     this.inputState = nextInputState;
-    console.log(nextInputState);
   };
 
   const onAddQuizClick = () => {
@@ -42,6 +40,11 @@ export default function App({ targetEl }) {
     ) {
       const nextState = [...this.state, this.inputState];
       this.setState(nextState);
+      const inputList = document.querySelectorAll('input');
+      inputList.forEach((inputEl) => {
+        inputEl.type === 'text' && (inputEl.value = '');
+      });
+      this.inputState = initialInputState;
     } else {
       alert('please complete the form');
     }

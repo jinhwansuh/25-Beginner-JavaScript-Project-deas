@@ -2,6 +2,7 @@ import { Input, Text, Button } from '../base/index.js';
 
 export default function QuizCreate({
   targetEl,
+  onInputChange,
   onAddQuizClick,
   onQuizStartClick,
   onDeleteQuizClick,
@@ -11,12 +12,22 @@ export default function QuizCreate({
 
   new Text({ targetEl: quizCreateEl, tag: 'h2', text: 'Create Quiz' });
   new Text({ targetEl: quizCreateEl, tag: 'h3', text: 'Question' });
-  new Input({ targetEl: quizCreateEl, placeholder: 'Question' });
+  new Input({
+    targetEl: quizCreateEl,
+    state: 'question',
+    placeholder: 'Question',
+    onChange: onInputChange,
+  });
   new Text({ targetEl: quizCreateEl, tag: 'h3', text: 'Answers' });
-  new Input({ targetEl: quizCreateEl, placeholder: 'Answer...' });
-  new Input({ targetEl: quizCreateEl, placeholder: 'Answer...' });
-  new Input({ targetEl: quizCreateEl, placeholder: 'Answer...' });
-  new Input({ targetEl: quizCreateEl, placeholder: 'Answer...' });
+
+  for (let i = 0; i < 4; i++) {
+    new Input({
+      targetEl: quizCreateEl,
+      state: `answer${i + 1}`,
+      placeholder: 'Answer...',
+      onChange: onInputChange,
+    });
+  }
   new Button({
     targetEl: quizCreateEl,
     text: 'Add Quiz',
