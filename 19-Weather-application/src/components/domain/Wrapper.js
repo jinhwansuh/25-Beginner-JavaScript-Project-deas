@@ -15,7 +15,7 @@ export default function Wrapper({ targetEl }) {
 
     new Text({ targetEl: wrapperEl, tag: 'h1', text: weather });
     new Text({ targetEl: wrapperEl, tag: 'h1', text: city });
-    new Text({ targetEl: wrapperEl, tag: 'h1', text: temp });
+    new Text({ targetEl: wrapperEl, tag: 'h1', text: `${temp}℃` });
   };
 
   targetEl.appendChild(wrapperEl);
