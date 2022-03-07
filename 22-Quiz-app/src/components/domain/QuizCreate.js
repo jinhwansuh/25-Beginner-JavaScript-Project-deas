@@ -23,6 +23,7 @@ export default function QuizCreate({
     targetEl: quizCreateEl,
     state: 'question',
     placeholder: 'Question',
+    className: 'answer-input',
     onChange: onInputChange,
   });
   new Text({ targetEl: quizCreateEl, tag: 'h3', text: 'Answers' });

@@ -38,7 +38,7 @@ export default function App({ targetEl }) {
 
     const nextInputState = { ...this.inputState, rightAnswer: state };
     const nextButtonEl = document.querySelector(`.${state}-button`);
-    if (nextButtonEl) nextButtonEl.style.backgroundColor = 'red';
+    if (nextButtonEl) nextButtonEl.style.backgroundColor = 'purple';
 
     this.inputState = nextInputState;
   };
