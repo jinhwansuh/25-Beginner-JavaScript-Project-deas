@@ -5,6 +5,7 @@ export default function Input({
   id,
   name,
   placeholder = '',
+  className,
   onChange,
   checked,
 }) {
@@ -14,6 +15,7 @@ export default function Input({
   id && (inputEl.id = id);
   name && (inputEl.name = name);
   checked && (inputEl.checked = true);
+  className && (inputEl.className = className);
 
   inputEl.addEventListener('change', (e) => {
     const inputValue = e.target.value;

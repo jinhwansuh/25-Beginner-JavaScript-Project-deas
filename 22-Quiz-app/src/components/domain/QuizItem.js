@@ -15,7 +15,7 @@ export default function QuizItem({ targetEl, item, index, onChange }) {
   ];
 
   new Text({ targetEl: quizItemEl, tag: 'h3', text: `Question ${index}` });
-  new Text({ targetEl: quizItemEl, tag: 'h3', text: item.question });
+  new Text({ targetEl: quizItemEl, tag: 'h4', text: item.question });
 
   new Input({
     targetEl: answer1Wrapper,
