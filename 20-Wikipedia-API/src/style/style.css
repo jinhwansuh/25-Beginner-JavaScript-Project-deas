@@ -12,6 +12,16 @@ h2 {
   align-items: center;
   background-color: #eee;
 }
+main > form {
+  height: 50px;
+  margin: 20px 0;
+}
+main > form  > input{
+  height: 100%;
+  width: 400px;
+  font-size: 25px;
+  border-radius: 10px;
+}
 
 .item {
   display: flex;
@@ -23,11 +33,17 @@ h2 {
 }
 
 .item img {
-  width: 250px;
+  width: 300px;
 }
 
 .scroll-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(81, 175, 182, 0.8);
+  border: none;
+  cursor: pointer;
 }
