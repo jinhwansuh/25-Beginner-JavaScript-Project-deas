@@ -28,16 +28,20 @@ export default function QuizCreate({
   new Text({ targetEl: quizCreateEl, tag: 'h3', text: 'Answers' });
 
   answerArray.map((wrapper, i) => {
+    wrapper.className = 'answer';
+
     new Button({
       targetEl: wrapper,
       state: `answer${i + 1}`,
       onClick: onAnswerClick,
+      className: `answer${i + 1}-button a-btn`,
       text: i + 1,
     });
     new Input({
       targetEl: wrapper,
       state: `answer${i + 1}`,
       placeholder: 'Answer...',
+      className: 'answer-input',
       onChange: onInputChange,
     });
     quizCreateEl.appendChild(wrapper);

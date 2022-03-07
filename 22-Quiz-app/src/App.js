@@ -32,7 +32,14 @@ export default function App({ targetEl }) {
     this.inputState = nextInputState;
   };
   const onAnswerClick = (state) => {
+    const prevChecked = this.inputState.rightAnswer;
+    const prevButtonEl = document.querySelector(`.${prevChecked}-button`);
+    if (prevButtonEl) prevButtonEl.style.backgroundColor = '';
+
     const nextInputState = { ...this.inputState, rightAnswer: state };
+    const nextButtonEl = document.querySelector(`.${state}-button`);
+    if (nextButtonEl) nextButtonEl.style.backgroundColor = 'red';
+
     this.inputState = nextInputState;
   };
 
@@ -49,9 +56,13 @@ export default function App({ targetEl }) {
     ) {
       const nextState = [...this.state, this.inputState];
       this.setState(nextState);
-      const inputList = document.querySelectorAll('input');
+      const inputList = document.querySelectorAll('.answer-input');
+      const buttonList = document.querySelectorAll('.a-btn');
       inputList.forEach((inputEl) => {
         inputEl.type === 'text' && (inputEl.value = '');
+      });
+      buttonList.forEach((buttonEl) => {
+        buttonEl.style.backgroundColor = '';
       });
       this.inputState = initialInputState;
     } else {
@@ -68,7 +79,7 @@ export default function App({ targetEl }) {
       });
       taskButtonEl.style.display = 'block';
     } else {
-      alert('please complete the form');
+      alert('please add quiz at least 1');
     }
   };
 
