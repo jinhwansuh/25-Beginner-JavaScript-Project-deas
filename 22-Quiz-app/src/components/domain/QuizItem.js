@@ -7,6 +7,12 @@ export default function QuizItem({ targetEl, item, index, onChange }) {
   const answer3Wrapper = document.createElement('div');
   const answer4Wrapper = document.createElement('div');
   quizItemEl.className = 'quiz-item';
+  const answerArray = [
+    answer1Wrapper,
+    answer2Wrapper,
+    answer3Wrapper,
+    answer4Wrapper,
+  ];
 
   new Text({ targetEl: quizItemEl, tag: 'h3', text: `Question ${index}` });
   new Text({ targetEl: quizItemEl, tag: 'h3', text: item.question });
@@ -68,9 +74,8 @@ export default function QuizItem({ targetEl, item, index, onChange }) {
     }
   });
 
-  quizItemEl.appendChild(answer1Wrapper);
-  quizItemEl.appendChild(answer2Wrapper);
-  quizItemEl.appendChild(answer3Wrapper);
-  quizItemEl.appendChild(answer4Wrapper);
+  for (const wrapper of answerArray) {
+    quizItemEl.appendChild(wrapper);
+  }
   targetEl.appendChild(quizItemEl);
 }

@@ -2,6 +2,7 @@ import { Text } from '../base/index.js';
 
 export default function QuizResult({ targetEl, answerList }) {
   const quizResultEl = document.createElement('div');
+  quizResultEl.className = 'quiz-result';
 
   this.state = answerList;
 

@@ -10,15 +10,11 @@ export default function QuizCreate({
 }) {
   const quizCreateEl = document.createElement('div');
   quizCreateEl.className = 'quiz-create';
-  const answer1Wrapper = document.createElement('div');
-  const answer2Wrapper = document.createElement('div');
-  const answer3Wrapper = document.createElement('div');
-  const answer4Wrapper = document.createElement('div');
   const answerArray = [
-    answer1Wrapper,
-    answer2Wrapper,
-    answer3Wrapper,
-    answer4Wrapper,
+    document.createElement('div'),
+    document.createElement('div'),
+    document.createElement('div'),
+    document.createElement('div'),
   ];
 
   new Text({ targetEl: quizCreateEl, tag: 'h2', text: 'Create Quiz' });
@@ -31,23 +27,21 @@ export default function QuizCreate({
   });
   new Text({ targetEl: quizCreateEl, tag: 'h3', text: 'Answers' });
 
-  for (let i = 0; i < answerArray.length; i++) {
+  answerArray.map((wrapper, i) => {
     new Button({
-      targetEl: answerArray[i],
+      targetEl: wrapper,
       state: `answer${i + 1}`,
       onClick: onAnswerClick,
       text: i + 1,
     });
     new Input({
-      targetEl: answerArray[i],
+      targetEl: wrapper,
       state: `answer${i + 1}`,
       placeholder: 'Answer...',
       onChange: onInputChange,
     });
-  }
-  for (const wrapper of answerArray) {
     quizCreateEl.appendChild(wrapper);
-  }
+  });
 
   new Button({
     targetEl: quizCreateEl,
