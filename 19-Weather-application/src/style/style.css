@@ -28,6 +28,13 @@ main {
   background-color: #eee;
   opacity: 0.5;
 }
+.slide.in > form {
+  margin-top: 40px;
+}
+.slide.in > form > button {
+  opacity: 1;
+  background-color: #aaa;
+}
 
 .slide.out {
   display: none;
@@ -39,4 +46,8 @@ main {
   left: 50%;
   transition: translate(-50%, -50%);
   display: flex;
+}
+
+.details > h1 {
+  margin: 0 20px;
 }

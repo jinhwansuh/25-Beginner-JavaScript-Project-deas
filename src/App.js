@@ -9,6 +9,3 @@ export default function App({ targetEl }) {
 
   targetEl.appendChild(containerEl);
 }
-
-// Todo :
-// 배경이미지 고정하기
