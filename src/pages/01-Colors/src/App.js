@@ -1,9 +1,10 @@
 import { colorArray } from './assets/colors.js';
 import { Button } from './components/index.js';
 
-export default function App({ targetEl, initialState }) {
+export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
   containerEl.className = 'container';
+  const initialState = 0;
 
   this.state = initialState;
 

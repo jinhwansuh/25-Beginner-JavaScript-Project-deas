@@ -1,5 +1,6 @@
 import Card from './components/domain/Card.js';
 import { dataArray } from './utils/data.js';
+import './style/style.css';
 
 export default function App({ targetEl }) {
   const containerEl = document.createElement('div');

@@ -1,6 +1,6 @@
 import App from './App.js';
+import './style/style.css';
 
 const mainEl = document.querySelector('#app');
-const initialState = 0;
 
-new App({ targetEl: mainEl, initialState });
+new App({ targetEl: mainEl });
