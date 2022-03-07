@@ -13,15 +13,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.(png|jpg|gif)$/i,
         use: [
-          miniCssExtractPlugin.loader,
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: 'assets/[name].[ext]',
+              esModule: false,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: miniCssExtractPlugin.loader,
+          },
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[local]--[hash:base64:5]',
-              },
+              esModule: true,
+              // modules: {
+              //   namedExport: true,
+              //   localIdentName: '[local]--[hash:base64:5]',
+              // },
             },
           },
         ],
