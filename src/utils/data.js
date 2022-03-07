@@ -130,4 +130,25 @@ export const dataArray = [
     description: 'See the projects',
     color: 'rgba(200, 200, 200, 0.7)',
   },
+  {
+    link: 'https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/19-Weather-application',
+    imageUrl: 'src/assets/dataImages/19.png',
+    title: 'Weather application',
+    description: 'Check your city weather',
+    color: 'rgba(20, 30, 40, 0.7)',
+  },
+  {
+    link: 'https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/20-Wikipedia-API',
+    imageUrl: 'src/assets/dataImages/20.png',
+    title: 'Wikipedia API',
+    description: 'Search everything you want',
+    color: 'rgba(150, 20, 10, 0.7)',
+  },
+  {
+    link: 'https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/22-Quiz-app',
+    imageUrl: 'src/assets/dataImages/22.png',
+    title: 'Quiz app',
+    description: 'Make and Task Quiz',
+    color: 'rgba(80, 170, 80, 0.7)',
+  },
 ];
