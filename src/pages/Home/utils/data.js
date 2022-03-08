@@ -12,7 +12,7 @@ const images = importAll(
 
 export const dataArray = [
   {
-    link: 'https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/01-Colors',
+    link: '/Colors',
     imageUrl: images['01.png'],
     title: 'Colors',
     description: 'Change a background color randomly',

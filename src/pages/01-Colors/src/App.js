@@ -1,5 +1,6 @@
 import { colorArray } from './assets/colors.js';
 import { Button } from './components/index.js';
+import './style/style.css';
 
 export default function App({ targetEl }) {
   const containerEl = document.createElement('div');
