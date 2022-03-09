@@ -1,0 +1,24 @@
+{
+  "name": "25-Beginner-JavaScript-Project-ideas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas.git",
+  "author": "jinhwansuh <nick02190219@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prod": "webpack serve --mode=production",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

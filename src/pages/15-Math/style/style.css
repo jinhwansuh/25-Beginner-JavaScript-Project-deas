@@ -1,0 +1,85 @@
+
+main.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: tomato;
+  padding: 0 30px;
+}
+
+.header nav span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.header span {
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+}
+.header > span {
+  font-size: 35px;
+}
+
+.container {
+  flex: 1;
+  margin: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  flex: 4;
+  background-color: white;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 3px gray;
+  border-radius: 7px;
+}
+.table span {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 15px;
+}
+
+.numbers {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.numbers span {
+  margin: 10px;
+  color: white;
+  font-size: 9rem;
+  font-weight: 900;
+  cursor: pointer;
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 1px gray;
+  border-radius: 7px;
+}
+
+.numbers span:nth-child(1) {
+  background-color: #FE4A49;
+}
+.numbers span:nth-child(2) {
+  background-color: #2AB7CA;
+}
+.numbers span:nth-child(3) {
+  background-color: #FED766;
+}
