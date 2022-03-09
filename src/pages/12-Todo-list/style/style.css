@@ -1,0 +1,52 @@
+
+main.main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgb(248, 158, 142), rgb(145, 255, 231));
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 40px;
+}
+.header span {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+}
+.header form {
+  height: 50px;
+}
+.main input,
+.main button {
+  height: 100%;
+}
+
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.todo_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+  height: 60px;
+  background-color: aliceblue;
+  margin: 10px 0;
+  font-size: 20px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.todo_item:hover {
+  border: 1px solid red;
+}
+
+.checked {
+  color: red;
+}

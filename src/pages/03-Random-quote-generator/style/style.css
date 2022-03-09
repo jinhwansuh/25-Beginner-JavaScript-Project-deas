@@ -1,0 +1,43 @@
+
+main.main {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #06BDC1, #68469F);
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container button {
+  margin-top: 30px;
+  border: none;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(67, 192, 192);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.board {
+  border: 10px solid rgb(96, 222, 245);
+  background-color: rgb(238, 231, 231);
+  box-shadow: 0px 2px 6px 0px rgb(0 0 0 / 90%);
+  border-radius: 20px;
+  padding: 10px 30px;
+  height: 400px;
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+
+.board div {
+  margin: 20px 0;
+}

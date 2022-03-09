@@ -1,0 +1,30 @@
+
+.container { 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text { 
+  font-size: 2rem;
+  text-align: center;
+}
+.text > div {
+  margin: 120px 0;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% { color: white; }
+  50% { color: grey; }
+  100% { color: black; }
+}
+
+.color_btn {
+  height: 50px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}

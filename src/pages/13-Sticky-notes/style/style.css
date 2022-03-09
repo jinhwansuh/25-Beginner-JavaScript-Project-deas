@@ -1,0 +1,18 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note_lists {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.note {
+  height: 200px;
+  width: 200px;
+  background-color: #aaa;
+  margin: 15px;
+}

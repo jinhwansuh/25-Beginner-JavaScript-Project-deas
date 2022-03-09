@@ -1,0 +1,25 @@
+
+
+.container {
+  height: 100vh;
+}
+
+.container div {
+  text-align: center;
+}
+
+.btn_change {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: none;
+  border: 1px solid;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.btn_change:hover {
+  background-color: antiquewhite;
+}
