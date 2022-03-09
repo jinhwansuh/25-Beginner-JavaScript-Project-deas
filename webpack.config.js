@@ -26,19 +26,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [
-          {
-            loader: miniCssExtractPlugin.loader,
-          },
+          miniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              esModule: true,
-              // modules: {
-              //   namedExport: true,
-              //   localIdentName: '[local]--[hash:base64:5]',
-              // },
+              modules: {
+                localIdentName: '[local]--[hash:base64:5]',
+              },
             },
           },
         ],
