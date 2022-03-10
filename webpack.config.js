@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -9,6 +10,15 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
+  },
+  devServer: {
+    historyApiFallback: true,
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
   },
   module: {
     rules: [
@@ -44,5 +54,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './index.html' }),
     new miniCssExtractPlugin({ filename: './css/bundle.css' }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '_redirects'),
+        },
+      ],
+    }),
   ],
 };

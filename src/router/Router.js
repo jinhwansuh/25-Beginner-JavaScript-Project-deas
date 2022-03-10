@@ -105,10 +105,6 @@ export default function Route({ targetEl }) {
   this.route();
 
   initRouter(() => this.route());
-
-  window.addEventListener('popstate', () => {
-    this.route();
-  });
 }
 
 /* 
