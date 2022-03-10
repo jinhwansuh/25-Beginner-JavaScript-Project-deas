@@ -100,7 +100,7 @@ export default function App({ targetEl }) {
     this.state = nextState;
   };
   const onAnswerSubmit = () => {
-    const quizListEl = document.querySelector('.quiz-list');
+    const quizListEl = document.querySelector(`.${quizStyle.quiz_list}`);
     new QuizResult({ targetEl: quizListEl, answerList: this.state });
   };
 
