@@ -1,5 +1,5 @@
-import Route from './router/Router.js';
+import App from './App.js';
 
 const mainEl = document.querySelector('#app');
 
-new Route({ targetEl: mainEl });
+new App({ targetEl: mainEl });
