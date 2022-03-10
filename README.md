@@ -1,8 +1,8 @@
 # 25 Beginner JavaScript Project ideas
 
-### SPA(branch - develop)  Deploy : https://25-beginner-java-script-project-ideas.vercel.app/
+### SPA(branch-[develop](https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas/tree/develop))  Deploy : https://25-beginner-java-script-project-ideas.vercel.app/
 
-### Static(branch - develop-feature) Deploy : https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/
+### Static(branch-[develop-feature](https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas/tree/develop-feature)) Deploy : https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/
 
 --- 
 https://dev.to/codefoxx/25-beginner-javascript-project-ideas-3m9h
