@@ -1,6 +1,6 @@
 # 25 Beginner JavaScript Project ideas
 
-### SPA(branch-[develop](https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas/tree/develop))  Deploy : Vercel([Link](https://25-beginner-java-script-project-ideas.vercel.app/))
+### SPA(branch-[develop](https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas/tree/develop))  Deploy : Netlify([Link](https://25-vanillajs-projects.netlify.app/))[![Netlify Status](https://api.netlify.com/api/v1/badges/a56d6e11-efc3-4857-93af-74406d0373c6/deploy-status)](https://app.netlify.com/sites/25-vanillajs-projects/deploys)
 
 ### Static(branch-[develop-feature](https://github.com/jinhwansuh/25-Beginner-JavaScript-Project-ideas/tree/develop-feature)) Deploy : Github-pages([Link](https://jinhwansuh.github.io/25-Beginner-JavaScript-Project-ideas/))
 
