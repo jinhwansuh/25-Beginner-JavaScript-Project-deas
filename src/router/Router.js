@@ -26,6 +26,8 @@ import { initRouter } from './routeHook.js';
 
 export default function Route({ targetEl }) {
   this.route = () => {
+    targetEl.className = '';
+    window.scrollTo(0, 0);
     targetEl.innerHTML = '';
 
     const { pathname } = window.location;
