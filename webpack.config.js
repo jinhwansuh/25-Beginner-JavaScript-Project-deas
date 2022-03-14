@@ -34,6 +34,7 @@ module.exports = {
             },
           },
         ],
+        type: 'javascript/auto',
       },
       {
         test: /\.css$/,
